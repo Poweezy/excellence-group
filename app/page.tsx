@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Globe, Award, Users, ChevronDown, Landmark, Truck, Leaf, Droplets, Construction, Sprout, Building2, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -24,13 +25,19 @@ const stats = [
 ];
 
 const staggerContainer = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const staggerItem = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
 export default function HomePage() {
@@ -38,60 +45,90 @@ export default function HomePage() {
     <div className="overflow-hidden bg-dark">
       {/* ───── HERO ───── */}
       <section className="relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden">
-        {/* Luxury Marble Background */}
-        <div className="absolute inset-0 bg-hero-gradient bg-cover bg-center bg-no-repeat" />
+        {/* Base Layer: Dark Marble */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/marble-gold-bg.png"
+            alt="Marble Texture"
+            fill
+            className="object-cover opacity-40 brightness-50"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark" />
+        </div>
         
-        {/* Grain & Depth Overlay */}
-        <div className="absolute inset-0 bg-dark/20 backdrop-brightness-50 noise-overlay" />
+        {/* Architectural Slanted Panels (Reference style) */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute -left-[10%] top-0 h-[150%] w-[60%] bg-dark/80 skew-x-[-12deg] border-r border-primary/20 shadow-[20px_0_50px_rgba(0,0,0,0.5)] backdrop-blur-sm"
+            style={{ transform: 'translateX(-10%) skewX(-15deg)' }}
+          />
+          <div 
+            className="absolute -right-[15%] top-0 h-[150%] w-[50%] bg-dark/60 skew-x-[-12deg] border-l border-primary/20 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] backdrop-blur-sm"
+            style={{ transform: 'translateX(10%) skewX(-15deg)' }}
+          />
+        </div>
+
+        {/* Floating Grain & Depth Overlay */}
+        <div className="absolute inset-0 z-0 noise-overlay opacity-30 pointer-events-none" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-12 relative"
           >
-            <div className="absolute -inset-10 bg-primary/20 blur-[80px] rounded-full opacity-50" />
-            <img 
+            {/* Logo Glow Ring */}
+            <div className="absolute -inset-16 bg-primary/10 blur-[100px] rounded-full opacity-40 animate-pulse" />
+            <div className="absolute -inset-1 bg-gradient-to-b from-primary/20 to-transparent blur-xl rounded-full opacity-30" />
+            
+            <Image 
               src="/logo.png" 
               alt="Excellence Group Logo" 
-              className="h-48 sm:h-64 object-contain relative z-10"
+              width={256}
+              height={256}
+              className="h-48 sm:h-72 w-auto object-contain relative z-10 drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+              priority
             />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="max-w-4xl"
+            transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+            className="max-w-4xl pt-8"
           >
-            <h1 className="luxury-text-display text-5xl sm:text-7xl lg:text-8xl font-bold bg-gold-metallic bg-clip-text text-transparent mb-6 tracking-tight leading-none">
-              Diversified Strength.<br />
-              <span className="italic">Unified Vision.</span>
+            <h1 className="luxury-text-display text-4xl sm:text-7xl lg:text-8xl font-bold mb-8 tracking-tighter leading-[0.9]">
+              <span className="luxury-gradient-gold block">Diversified Strength.</span>
+              <span className="text-white/90 italic mt-2 block">Unified Vision.</span>
             </h1>
             
-            <p className="luxury-text-accent text-primary-light mb-12 max-w-2xl mx-auto opacity-80">
-              Africa&apos;s Premier Diversified Conglomerate
-            </p>
+            <div className="flex items-center gap-6 justify-center mb-12">
+              <div className="h-[1px] w-12 bg-primary/30" />
+              <p className="luxury-text-accent text-primary-light/60 text-[10px] sm:text-xs">
+                AFRICA&apos;S PREMIER DIVERSIFIED CONGLOMERATE
+              </p>
+              <div className="h-[1px] w-12 bg-primary/30" />
+            </div>
 
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              transition={{ delay: 1.2, duration: 1 }}
+              className="flex flex-col sm:flex-row gap-8 justify-center items-center"
             >
               <Link
                 href="/about"
-                className="px-10 py-4 rounded-none border border-primary/40 bg-primary/5 text-primary-light luxury-text-accent hover:bg-primary/10 transition-all duration-500 group relative overflow-hidden"
+                className="px-12 py-5 bg-gold-metallic text-dark font-black luxury-text-accent text-[11px] tracking-[0.3em] hover:brightness-110 transition-all duration-500 shadow-[0_0_30px_rgba(212,175,53,0.2)]"
               >
-                <span className="relative z-10">Discover Our Story</span>
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-primary/10 transition-transform duration-500" />
+                DISCOVER OUR STORY
               </Link>
               <Link
                 href="/contact"
-                className="px-10 py-4 rounded-none border border-white/10 text-white/60 luxury-text-accent hover:border-white/30 hover:text-white transition-all duration-500"
+                className="px-12 py-5 border border-white/20 text-white/50 luxury-text-accent text-[11px] tracking-[0.3em] hover:bg-white/5 hover:text-white hover:border-white/40 transition-all duration-500"
               >
-                Get in Touch
+                GET IN TOUCH
               </Link>
             </motion.div>
           </motion.div>

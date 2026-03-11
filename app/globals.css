@@ -152,6 +152,46 @@ body {
   pointer-events: none;
 }
 
+/* Architectural Slanted Panels */
+.slant-panel {
+  position: absolute;
+  background: var(--dark-bg);
+  border: 1px solid rgba(212, 175, 53, 0.15);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slant-gold-edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+  box-shadow: 0 0 10px var(--primary-dark);
+}
+
+.luxury-gradient-gold {
+  background: linear-gradient(
+    135deg, 
+    #8a6d3b 0%, 
+    #e8cc6a 25%, 
+    #d4af35 50%, 
+    #e8cc6a 75%, 
+    #8a6d3b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
