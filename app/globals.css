@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -28,11 +28,24 @@ html {
 
 body {
   background-color: var(--dark-bg);
-  color: #e2e8f0;
+  color: #f1f5f9;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+.luxury-text-display {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: -0.01em;
+}
+
+.luxury-text-accent {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 500;
+  font-size: 0.75rem;
 }
 
 /* Custom scrollbar */

@@ -35,119 +35,89 @@ const staggerItem = {
 
 export default function HomePage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-dark">
       {/* ───── HERO ───── */}
-      <section className="relative min-h-[90vh] flex items-center animated-bg noise-overlay">
-        {/* Background grid */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(212,175,53,0.3) 1px, transparent 1px), linear-gradient(to right, rgba(212,175,53,0.3) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
+      <section className="relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden">
+        {/* Luxury Marble Background */}
+        <div className="absolute inset-0 bg-hero-gradient bg-cover bg-center bg-no-repeat" />
+        
+        {/* Grain & Depth Overlay */}
+        <div className="absolute inset-0 bg-dark/20 backdrop-brightness-50 noise-overlay" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="mb-12 relative"
+          >
+            <div className="absolute -inset-10 bg-primary/20 blur-[80px] rounded-full opacity-50" />
+            <img 
+              src="/logo.png" 
+              alt="Excellence Group Logo" 
+              className="h-48 sm:h-64 object-contain relative z-10"
+            />
+          </motion.div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-8"
-            >
-              <Award className="w-4 h-4" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="max-w-4xl"
+          >
+            <h1 className="luxury-text-display text-5xl sm:text-7xl lg:text-8xl font-bold bg-gold-metallic bg-clip-text text-transparent mb-6 tracking-tight leading-none">
+              Diversified Strength.<br />
+              <span className="italic">Unified Vision.</span>
+            </h1>
+            
+            <p className="luxury-text-accent text-primary-light mb-12 max-w-2xl mx-auto opacity-80">
               Africa&apos;s Premier Diversified Conglomerate
-            </motion.div>
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.1 }}
-              className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-            >
-              Building a Legacy of{" "}
-              <span className="gold-shimmer">Excellence</span>{" "}
-              Across Africa
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.2 }}
-              className="text-slate-400 text-xl leading-relaxed mb-10 max-w-2xl"
-            >
-              A diversified conglomerate with operations spanning 8 key industries,
-              driving sustainable economic growth and prosperity through innovation
-              and integrity.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4"
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-dark font-bold text-base hover:bg-primary-light transition-all duration-200 shadow-gold-sm hover:shadow-gold-md group"
+                className="px-10 py-4 rounded-none border border-primary/40 bg-primary/5 text-primary-light luxury-text-accent hover:bg-primary/10 transition-all duration-500 group relative overflow-hidden"
               >
-                Discover Our Story
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10">Discover Our Story</span>
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-primary/10 transition-transform duration-500" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-dark-border text-slate-300 font-semibold text-base hover:border-primary/40 hover:text-primary hover:bg-dark-elevated transition-all duration-200"
+                className="px-10 py-4 rounded-none border border-white/10 text-white/60 luxury-text-accent hover:border-white/30 hover:text-white transition-all duration-500"
               >
                 Get in Touch
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 text-xs">
-          <span>Scroll to explore</span>
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ───── STATS ───── */}
-      <section className="bg-dark-card border-y border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-primary/40">
+          <span className="luxury-text-accent text-[10px]">Explore Excellence</span>
+          <motion.div 
+            animate={{ y: [0, 10, 0], opacity: [0.3, 1, 0.3] }} 
+            transition={{ repeat: Infinity, duration: 2 }}
           >
-            {stats.map((stat) => (
-              <motion.div key={stat.label} variants={staggerItem} className="text-center">
-                <div className="text-4xl lg:text-5xl font-display font-bold gold-shimmer mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-slate-400 text-sm font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+            <div className="w-[1px] h-12 bg-gradient-to-b from-primary/60 to-transparent" />
           </motion.div>
         </div>
       </section>
 
-      {/* ───── DIVISIONS ───── */}
-      <section className="py-24 bg-dark relative">
+      {/* ───── DIVISIONS (World Class Catalog Style) ───── */}
+      <section className="py-32 bg-dark relative border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Divisions</span>
-            <h2 className="mt-3 font-display text-4xl lg:text-5xl font-bold text-white">
-              Diverse. Resilient. Growing.
+          <AnimatedSection className="text-center mb-24">
+            <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Institutional Portfolio</span>
+            <h2 className="luxury-text-display text-5xl lg:text-7xl text-white font-medium">
+              Strategic Excellence
             </h2>
-            <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-              Eight strategic business divisions working in synergy to deliver comprehensive value
-              across Africa and international markets.
-            </p>
+            <div className="w-24 h-[1px] bg-primary/30 mx-auto mt-8" />
           </AnimatedSection>
 
           <motion.div
@@ -155,89 +125,109 @@ export default function HomePage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0"
           >
             {divisions.map((div) => {
               const Icon = div.icon;
               return (
-                <motion.div key={div.href} variants={staggerItem}>
+                <motion.div key={div.href} variants={staggerItem} className="group border-[0.5px] border-white/5 aspect-square relative overflow-hidden">
                   <Link
                     href={div.href}
-                    className="group block p-6 rounded-2xl gold-border bg-dark-card hover:bg-dark-elevated transition-all duration-300 h-full"
+                    className="flex flex-col items-center justify-center p-8 h-full transition-all duration-700 hover:bg-white/[0.02]"
                   >
-                    <div className="mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                        <Icon className="w-6 h-6 text-primary" />
+                    <div className="mb-6 relative">
+                      <div className="absolute inset-0 blur-2xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-700 relative z-10" strokeWidth={1} />
+                    </div>
+                    <h3 className="luxury-text-accent text-white/80 group-hover:text-white transition-colors text-center">
+                      {div.name}
+                    </h3>
+                    <div className="mt-4 w-0 group-hover:w-8 h-[1px] bg-primary/40 transition-all duration-700" />
+                    
+                    {/* Hover Description overlay */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-dark/95 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                      <Icon className="w-8 h-8 text-primary mb-4" strokeWidth={1} />
+                      <h4 className="luxury-text-accent text-primary mb-4">{div.name}</h4>
+                      <p className="text-slate-400 text-xs text-center leading-relaxed luxury-text-sans font-light tracking-wide">{div.desc}</p>
+                      <div className="mt-6 luxury-text-accent text-[10px] text-white/40 flex items-center gap-2">
+                        View Department <ArrowRight className="w-3 h-3" />
                       </div>
                     </div>
-                  <h3 className="font-semibold text-white mb-2 group-hover:text-primary transition-colors">
-                    {div.name}
-                  </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{div.desc}</p>
-                  <div className="mt-4 flex items-center gap-1 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight className="w-4 h-4" />
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
-      {/* ───── WHY EXCELLENCE ───── */}
-      <section className="py-24 bg-dark-card">
+      {/* ───── STATS ───── */}
+      <section className="bg-dark relative py-24 overflow-hidden border-y border-white/5">
+        <div className="absolute inset-0 bg-radial-luxury opacity-30" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-12"
+          >
+            {stats.map((stat) => (
+              <motion.div key={stat.label} variants={staggerItem} className="text-center">
+                <div className="luxury-text-display text-4xl lg:text-6xl font-medium text-white mb-4">
+                  {stat.value}
+                </div>
+                <div className="luxury-text-accent text-[10px] text-primary/60 tracking-[0.3em] font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ───── MISSION ───── */}
+      <section className="py-32 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
             <AnimatedSection direction="left">
-              <span className="text-primary text-sm font-medium uppercase tracking-widest">Why Excellence Group</span>
-              <h2 className="mt-3 font-display text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Trusted. Proven. <br />
-                <span className="gold-shimmer">Unmatched.</span>
+              <span className="luxury-text-accent text-primary tracking-[0.4em] mb-6 block">Our Legacy</span>
+              <h2 className="luxury-text-display text-5xl lg:text-7xl text-white leading-tight mb-8">
+                Uncompromising<br />
+                <span className="italic">Execution.</span>
               </h2>
-              <p className="mt-6 text-slate-400 text-lg leading-relaxed">
-                For over two decades, Excellence Group has been at the forefront of Africa&apos;s
-                economic development, delivering exceptional results through disciplined
-                governance, innovation, and a commitment to sustainable growth.
+              <p className="text-slate-400 text-lg leading-relaxed font-light luxury-text-sans max-w-xl">
+                For over two decades, Excellence Group has redefined conglomerate management through a unique blend of traditional values and aggressive innovation. We don&apos;t just lead industries—we evolve them.
               </p>
-              <div className="mt-8 space-y-4">
+              
+              <div className="mt-12 space-y-8">
                 {[
-                  { icon: TrendingUp, text: "Consistent year-on-year revenue growth across all divisions" },
-                  { icon: Globe, text: "Active operations in 12 countries across Africa and beyond" },
-                  { icon: Users, text: "Over 5,000 talented professionals in our global team" },
-                  { icon: Award, text: "Multiple industry awards for governance and sustainability" },
+                  { icon: TrendingUp, text: "Consistent capital appreciation across multiple asset classes" },
+                  { icon: Globe, text: "Strategic market penetration in 12 emerging economies" },
                 ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5 text-primary" />
+                  <div key={text} className="flex items-start gap-6">
+                    <div className="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-primary" strokeWidth={1} />
                     </div>
-                    <p className="text-slate-300 text-sm leading-relaxed">{text}</p>
+                    <p className="text-slate-300 text-sm leading-relaxed luxury-text-sans pt-2">{text}</p>
                   </div>
                 ))}
               </div>
-              <Link
-                href="/about"
-                className="mt-10 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-dark font-bold text-sm hover:bg-primary-light transition-all group"
-              >
-                About Our Group <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </AnimatedSection>
 
-            <AnimatedSection direction="right" delay={0.1}>
-              <div className="grid grid-cols-2 gap-4">
+            <AnimatedSection direction="right" delay={0.2} className="relative">
+              <div className="absolute -inset-20 bg-primary/5 blur-[100px] rounded-full" />
+              <div className="grid grid-cols-2 gap-8 relative z-10">
                 {[
-                  { label: "Revenue Growth", value: "32%", sub: "Year-on-year" },
-                  { label: "Countries", value: "12", sub: "Active Markets" },
-                  { label: "Client Satisfaction", value: "98%", sub: "Retention Rate" },
-                  { label: "ESG Score", value: "A+", sub: "Sustainability Rating" },
+                  { label: "Revenue Grow", value: "32%" },
+                  { label: "Countries", value: "12" },
+                  { label: "Satisfaction", value: "98%" },
+                  { label: "Rating", value: "A+" },
                 ].map((card) => (
                   <div
                     key={card.label}
-                    className="p-6 rounded-2xl gold-border bg-dark text-center"
+                    className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm text-center"
                   >
-                    <div className="font-display text-3xl font-bold gold-shimmer">{card.value}</div>
-                    <div className="text-white text-sm font-semibold mt-1">{card.label}</div>
-                    <div className="text-slate-500 text-xs mt-1">{card.sub}</div>
+                    <div className="luxury-text-display text-4xl font-medium text-white mb-2">{card.value}</div>
+                    <div className="luxury-text-accent text-[8px] text-primary/60">{card.label}</div>
                   </div>
                 ))}
               </div>
@@ -247,31 +237,23 @@ export default function HomePage() {
       </section>
 
       {/* ───── CTA ───── */}
-      <section className="py-24 bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-radial-glow" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-48 bg-dark relative overflow-hidden text-center">
+        {/* Abstract background elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute inset-0 bg-marble-luxury bg-cover bg-bottom opacity-10" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <AnimatedSection>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Partner with <span className="gold-shimmer">Excellence</span>?
+            <h2 className="luxury-text-display text-6xl lg:text-8xl text-white mb-12 leading-tight">
+              Begin Your Journey In <br />
+              <span className="bg-gold-metallic bg-clip-text text-transparent italic">Excellence.</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-xl mx-auto mb-10">
-              Whether you&apos;re an investor, business partner, or prospective employee —
-              we&apos;d love to explore how we can grow together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-dark font-bold text-base hover:bg-primary-light transition-all shadow-gold-md hover:shadow-gold-lg group"
-              >
-                Contact Us Today <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/investors"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-dark-border text-slate-300 font-semibold hover:border-primary/40 hover:text-primary hover:bg-dark-elevated transition-all"
-              >
-                Investor Relations
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-block px-12 py-5 bg-gold-metallic text-dark font-bold luxury-text-accent tracking-widest hover:brightness-110 transition-all duration-500 shadow-gold-lg"
+            >
+              Consult With Us
+            </Link>
           </AnimatedSection>
         </div>
       </section>
