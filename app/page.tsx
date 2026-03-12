@@ -267,32 +267,20 @@ export default function HomePage() {
       {/* ───── IMPACT TEASER ───── */}
       <section className="py-32 bg-dark-card relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
-            <div className="lg:w-1/2">
-               <span className="luxury-text-accent text-secondary tracking-[0.4em] mb-4 block">Sustainability</span>
-               <h2 className="luxury-text-display text-5xl lg:text-7xl text-white mb-8">
-                Growth That <span className="italic">Uplifts Communities.</span>
-               </h2>
-               <p className="text-slate-400 text-lg font-light leading-relaxed mb-10 luxury-text-sans">
-                  Our success is measured by the progress of the people we serve. From job creation to environmental stewardship, we are committed to Eswatini's long-term prosperity.
-               </p>
-               <Link
-                href="/sustainability"
-                className="inline-flex items-center gap-3 text-secondary border border-secondary/20 px-8 py-4 hover:bg-secondary/5 transition-all luxury-text-accent text-[11px]"
-              >
-                Our Impact Report <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-               <div className="aspect-square bg-white/[0.03] border border-white/5 p-8 flex flex-col justify-end">
-                  <div className="text-secondary text-3xl font-display mb-2">500+</div>
-                  <div className="text-white/40 text-[10px] luxury-text-accent">Jobs Created</div>
-               </div>
-               <div className="aspect-square bg-white/[0.03] border border-white/5 p-8 flex flex-col justify-end translate-y-8">
-                  <div className="text-secondary text-3xl font-display mb-2">100%</div>
-                  <div className="text-white/40 text-[10px] luxury-text-accent">Local Sourcing</div>
-               </div>
-            </div>
+          <div className="flex flex-col items-center text-center">
+            <span className="luxury-text-accent text-secondary tracking-[0.4em] mb-4 block">Sustainability</span>
+            <h2 className="luxury-text-display text-5xl lg:text-7xl text-white mb-8">
+              Growth That <span className="italic">Uplifts Communities.</span>
+            </h2>
+            <p className="text-slate-400 text-lg font-light leading-relaxed mb-10 luxury-text-sans max-w-3xl">
+              Our success is measured by the progress of the people we serve. From job creation to environmental stewardship, we are committed to Eswatini's long-term prosperity.
+            </p>
+            <Link
+              href="/sustainability"
+              className="inline-flex items-center gap-3 text-secondary border border-secondary/20 px-8 py-4 hover:bg-secondary/5 transition-all luxury-text-accent text-[11px]"
+            >
+              Our Impact Report <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
