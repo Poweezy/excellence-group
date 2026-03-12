@@ -61,7 +61,7 @@ export default function HomePage() {
       <motion.div className="scroll-progress" style={{ scaleX }} />
       
       {/* ───── HERO ───── */}
-      <section className="relative min-h-[100vh] flex items-center justify-center pt-24 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-20 overflow-hidden">
         {/* Base Layer: Deep Navy Marble */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -85,14 +85,14 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="mb-12"
+            className="mb-8"
           >
             <Image 
               src="/logo.png" 
               alt="Excellence Group Logo" 
-              width={240}
-              height={240}
-              className="h-48 sm:h-64 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
+              width={180}
+              height={180}
+              className="h-32 sm:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
               priority
             />
           </motion.div>
@@ -103,12 +103,12 @@ export default function HomePage() {
             transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             className="max-w-5xl"
           >
-            <h1 className="luxury-text-display text-5xl sm:text-7xl lg:text-9xl font-bold mb-8 tracking-tighter leading-[0.9]">
+            <h1 className="luxury-text-display text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter leading-[0.9]">
               <span className="luxury-gradient-gold block pb-2">Diversified Strength.</span>
               <span className="text-white italic block">Unified Vision.</span>
             </h1>
             
-            <p className="text-white/80 text-lg sm:text-xl font-light max-w-2xl mx-auto mb-16 luxury-text-sans tracking-wide">
+            <p className="text-white/80 text-base sm:text-lg font-light max-w-2xl mx-auto mb-10 luxury-text-sans tracking-wide">
               A premium, resilient, forward-thinking diversified African enterprise driving sustainable growth across Eswatini and Southern Africa.
             </p>
 
