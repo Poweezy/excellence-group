@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Excellence Group (Pty) Ltd – Diversified Conglomerate | Eswatini",
+    default: "Excellence Group (Pty) Ltd | Diversified Excellence in Eswatini",
     template: "%s | Excellence Group",
   },
   description:
-    "Excellence Group (Pty) Ltd is a premier diversified African enterprise built on integrity, innovation, and operational excellence, driving growth across Eswatini and Southern Africa.",
-  keywords: ["Excellence Group", "Eswatini", "conglomerate", "Manzini", "diversified enterprise"],
+    "Excellence Group (Pty) Ltd is a premier diversified African enterprise built on integrity, innovation, and ivory-standard excellence, driving growth across Eswatini and Southern Africa.",
+  keywords: ["Excellence Group", "Eswatini", "Conglomerate", "Manzini", "Investment", "Logistics", "Sustainability"],
   openGraph: {
     type: "website",
     locale: "en_SZ",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en-SZ" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

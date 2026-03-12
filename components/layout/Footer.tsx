@@ -47,7 +47,7 @@ export default function Footer() {
               <span className="font-display font-bold text-xl text-white">Excellence Group</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              A premium, resilient, forward-thinking diversified African enterprise built on integrity, innovation, and operational excellence. 
+              A premium, resilient, forward-thinking diversified African enterprise built on integrity, innovation, and excellence. 
               Driving measurable social impact across Eswatini and Southern Africa.
             </p>
             <div className="space-y-3">

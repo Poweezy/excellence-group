@@ -27,7 +27,7 @@ const stats = [
 const values = [
   { name: "Integrity", icon: ShieldCheck, desc: "Upholding the highest moral and ethical standards in every transaction." },
   { name: "Innovation", icon: Zap, desc: "Pioneering new technologies and methodologies to lead global markets." },
-  { name: "Operational Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
+  { name: "Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
   { name: "Sustainability", icon: Leaf, desc: "Commitment to long-term environmental and economic resilience." },
   { name: "Social Impact", icon: Heart, desc: "Creating measurable value and upliftment for our local communities." },
 ];
@@ -45,7 +45,7 @@ const staggerContainer = {
 
 const staggerItem = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
 export default function HomePage() {

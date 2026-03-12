@@ -10,34 +10,39 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#d4af35",
-          light: "#e8cc6a",
-          dark: "#a88920",
-          luxury: "#c5a059",
+          DEFAULT: "#D4AF37", // Metallic Gold
+          light: "#F5E6AD",
+          dark: "#A68920",
+          luxury: "#C5A059",
+        },
+        secondary: {
+          DEFAULT: "#10B981", // Emerald Green
+          light: "#34D399",
+          dark: "#065F46",
         },
         dark: {
-          DEFAULT: "#05070a",
-          card: "#0a0c10",
-          elevated: "#0f1218",
-          border: "#1a1e26",
+          DEFAULT: "#0A2540", // Deep Navy
+          card: "#0D2D4D",
+          elevated: "#11355A",
+          border: "#1B446D",
         },
         gold: {
-          50: "#fff9e6",
-          100: "#ffefbf",
-          200: "#ffe080",
-          300: "#ffd140",
-          400: "#ffc200",
-          500: "#d4af35",
-          600: "#a88920",
-          700: "#7d6618",
-          800: "#524310",
-          900: "#272108",
+          50: "#FFFDF5",
+          100: "#FEF9E6",
+          200: "#FDF0BD",
+          300: "#FCE185",
+          400: "#FBD24D",
+          500: "#D4AF37",
+          600: "#A68920",
+          700: "#786317",
+          800: "#4A3D0F",
+          900: "#1C1706",
         },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        serif: ["Cormorant Garamond", "serif"],
-        display: ["Cormorant Garamond", "serif"],
+        serif: ["Playfair Display", "serif"],
+        display: ["Playfair Display", "serif"],
       },
       backgroundImage: {
         "hero-gradient": "linear-gradient(to bottom, rgba(5, 7, 10, 0.4), rgba(5, 7, 10, 0.9)), url('/assets/marble-gold-bg.png')",
