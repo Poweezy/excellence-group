@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   return (
     <div className="overflow-hidden">
@@ -81,10 +83,48 @@ export default function ContactPage() {
                   </motion.div>
                 ) : (
                   <form
-                    onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      setLoading(true);
+                      setError('');
+                      
+                      const formData = new FormData(e.currentTarget);
+                      const data = {
+                        name: formData.get('name'),
+                        company: formData.get('company'),
+                        email: formData.get('email'),
+                        subject: formData.get('subject'),
+                        message: formData.get('message'),
+                      };
+
+                      try {
+                        const response = await fetch('/api/contact', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify(data),
+                        });
+
+                        if (!response.ok) {
+                          const error = await response.json();
+                          throw new Error(error.error || 'Failed to submit');
+                        }
+
+                        setSubmitted(true);
+                      } catch (err) {
+                        setError(err instanceof Error ? err.message : 'An error occurred');
+                      } finally {
+                        setLoading(false);
+                      }
+                    }}
                     className="p-10 rounded-2xl gold-border bg-dark-card space-y-8"
                   >
                     <h3 className="luxury-text-display text-3xl text-white mb-2">Send an Official Inquiry</h3>
+                    {error && (
+                      <div className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                        <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />
+                        <p className="text-red-400 text-sm">{error}</p>
+                      </div>
+                    )}
                     <div className="grid sm:grid-cols-2 gap-6">
                       {[
                         { id: "name", label: "Full Name", placeholder: "John Smith" },
@@ -96,10 +136,12 @@ export default function ContactPage() {
                           </label>
                           <input
                             id={id}
+                            name={id}
                             type="text"
                             placeholder={placeholder}
                             required
-                            className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light"
+                            disabled={loading}
+                            className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light disabled:opacity-50"
                           />
                         </div>
                       ))}
@@ -108,17 +150,21 @@ export default function ContactPage() {
                       <label htmlFor="email" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Corporate Email</label>
                       <input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="you@company.com"
                         required
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light"
+                        disabled={loading}
+                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light disabled:opacity-50"
                       />
                     </div>
                     <div>
                       <label htmlFor="subject" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Nature of Inquiry</label>
                       <select
                         id="subject"
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light appearance-none"
+                        name="subject"
+                        disabled={loading}
+                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light appearance-none disabled:opacity-50"
                       >
                         <option value="">Select a topic</option>
                         <option>Business Partnership</option>
@@ -132,17 +178,20 @@ export default function ContactPage() {
                       <label htmlFor="message" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Message</label>
                       <textarea
                         id="message"
+                        name="message"
                         rows={6}
                         required
+                        disabled={loading}
                         placeholder="Provide details on your inquiry..."
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none font-light"
+                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none font-light disabled:opacity-50"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 px-8 py-5 rounded-xl bg-primary text-dark font-bold text-sm hover:bg-primary-light transition-all shadow-gold-sm hover:shadow-gold-md group uppercase tracking-widest"
+                      disabled={loading}
+                      className="w-full flex items-center justify-center gap-2 px-8 py-5 rounded-xl bg-primary text-dark font-bold text-sm hover:bg-primary-light transition-all shadow-gold-sm hover:shadow-gold-md group uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Submit Official Inquiry
+                      {loading ? 'Submitting...' : 'Submit Official Inquiry'}
                       <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                   </form>

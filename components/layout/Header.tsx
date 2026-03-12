@@ -50,13 +50,15 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10" aria-label="Main navigation">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.name} className="relative group/dropdown">
                   <button
                     onMouseEnter={() => setDivisionsOpen(true)}
                     onMouseLeave={() => setDivisionsOpen(false)}
+                    aria-expanded={divisionsOpen}
+                    aria-haspopup="true"
                     className="luxury-text-accent flex items-center gap-2 text-[10px] text-white/50 hover:text-primary transition-all duration-300 py-4"
                   >
                     {link.name}
@@ -114,6 +116,8 @@ export default function Header() {
           <button
             className="lg:hidden text-white/60 hover:text-white transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

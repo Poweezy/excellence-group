@@ -1,7 +1,7 @@
-
 import { Landmark, Truck, Leaf, Droplets, Construction, Sprout, Building2, ShieldCheck, Zap, Award, Heart } from "lucide-react";
+import type { Division, NavLink, Stat, Value } from './types';
 
-export const divisions = [
+export const divisions: Division[] = [
   { name: "Financial Advisory", icon: Landmark, href: "/financial", desc: "Expert wealth management and capital solutions" },
   { name: "Logistics Division", icon: Truck, href: "/logistics", desc: "End-to-end supply chain excellence" },
   { name: "Sustainability", icon: Leaf, href: "/sustainability", desc: "Green energy and environmental solutions" },
@@ -12,7 +12,7 @@ export const divisions = [
   { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions" },
 ];
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Divisions", href: "#", dropdown: divisions.map(({ name, href }) => ({ name, href })) },
@@ -21,14 +21,14 @@ export const navLinks = [
   { name: "Tenders", href: "/tenders" },
 ];
 
-export const stats = [
+export const stats: Stat[] = [
   { label: "Years of Excellence", value: "20+" },
   { label: "Countries Active", value: "12" },
   { label: "Divisions", value: "8" },
   { label: "Employees", value: "5,000+" },
 ];
 
-export const values = [
+export const values: Value[] = [
   { name: "Integrity", icon: ShieldCheck, desc: "Upholding the highest moral and ethical standards in every transaction." },
   { name: "Innovation", icon: Zap, desc: "Pioneering new technologies and methodologies to lead global markets." },
   { name: "Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },

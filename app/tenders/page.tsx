@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Gavel, ClipboardList, ShieldCheck, ArrowRight, FileText } from "lucide-react";
+import { Gavel, ClipboardList, ShieldCheck, ArrowRight, FileText, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = { 
@@ -110,5 +110,3 @@ export default function TendersPage() {
     </div>
   );
 }
-
-import { CheckCircle } from "lucide-react";
