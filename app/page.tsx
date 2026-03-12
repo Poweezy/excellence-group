@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { ArrowRight, TrendingUp, Globe, ChevronDown, MapPin } from "lucide-react";
+import { ArrowRight, TrendingUp, Globe, ChevronDown } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { divisions, stats, values } from "@/lib/data";
+import { divisions, values } from "@/lib/data";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -182,30 +182,6 @@ export default function HomePage() {
                 </motion.div>
               );
             })}
-          </motion.div>
-        </div>
-      </section>
-
-
-
-      <section className="bg-dark relative py-24 overflow-hidden border-y border-white/5">
-        <div className="absolute inset-0 bg-radial-luxury opacity-30" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-12"
-          >
-            {stats.map((stat) => (
-              <motion.div key={stat.label} variants={staggerItem} className="text-center">
-                <div className="luxury-text-display text-4xl lg:text-6xl font-medium text-white mb-4">
-                  {stat.value}
-                </div>
-                <div className="luxury-text-accent text-[10px] text-primary/60 tracking-[0.3em] font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </section>
