@@ -201,37 +201,28 @@ export default function HomePage() {
               </p>
               
               <div className="mt-12 space-y-8">
-                {[
-                  { icon: TrendingUp, text: "Consistent capital appreciation across multiple asset classes" },
-                  { icon: Globe, text: "Strategic market penetration in 12 emerging economies" },
-                ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-start gap-6">
-                    <div className="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-primary" strokeWidth={1} />
-                    </div>
-                    <p className="text-slate-300 text-sm leading-relaxed luxury-text-sans pt-2">{text}</p>
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0">
+                    <TrendingUp className="w-5 h-5 text-primary" strokeWidth={1} />
                   </div>
-                ))}
+                  <p className="text-slate-300 text-sm leading-relaxed luxury-text-sans pt-2">Consistent capital appreciation across multiple asset classes</p>
+                </div>
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0">
+                    <Globe className="w-5 h-5 text-primary" strokeWidth={1} />
+                  </div>
+                  <p className="text-slate-300 text-sm leading-relaxed luxury-text-sans pt-2">Strategic expansion across Southern Africa</p>
+                </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection direction="right" delay={0.2} className="relative">
               <div className="absolute -inset-20 bg-primary/5 blur-[100px] rounded-full" />
-              <div className="grid grid-cols-2 gap-8 relative z-10">
-                {[
-                  { label: "Revenue Grow", value: "32%" },
-                  { label: "Countries", value: "12" },
-                  { label: "Satisfaction", value: "98%" },
-                  { label: "Rating", value: "A+" },
-                ].map((card) => (
-                  <div
-                    key={card.label}
-                    className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm text-center"
-                  >
-                    <div className="luxury-text-display text-4xl font-medium text-white mb-2">{card.value}</div>
-                    <div className="luxury-text-accent text-[8px] text-primary/60">{card.label}</div>
-                  </div>
-                ))}
+              <div className="aspect-square rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-sm flex items-center justify-center p-12 relative z-10">
+                <div className="text-center">
+                  <div className="luxury-text-display text-6xl font-medium text-white mb-4">Excellence</div>
+                  <div className="luxury-text-accent text-[10px] text-primary/60 tracking-[0.3em]">Driven by Integrity</div>
+                </div>
               </div>
             </AnimatedSection>
           </div>
