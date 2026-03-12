@@ -3,34 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { ArrowRight, TrendingUp, Globe, Award, Users, ChevronDown, Landmark, Truck, Leaf, Droplets, Construction, Sprout, Building2, ShieldCheck, MapPin, Heart, Zap, Target } from "lucide-react";
+import { ArrowRight, TrendingUp, Globe, ChevronDown, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-
-const divisions = [
-  { name: "Financial Advisory", icon: Landmark, href: "/financial", desc: "Expert wealth management and capital solutions" },
-  { name: "Logistics Division", icon: Truck, href: "/logistics", desc: "End-to-end supply chain excellence" },
-  { name: "Sustainability", icon: Leaf, href: "/sustainability", desc: "Green energy and environmental solutions" },
-  { name: "Water Bottling", icon: Droplets, href: "/water", desc: "Premium water bottling and distribution" },
-  { name: "Heavy Plant & Construction", icon: Construction, href: "/heavy-plant", desc: "Large-scale construction and infrastructure" },
-  { name: "Agriculture", icon: Sprout, href: "/agriculture", desc: "Modern farming and agri-processing" },
-  { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development" },
-  { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions" },
-];
-
-const stats = [
-  { label: "Years of Excellence", value: "20+" },
-  { label: "Countries Active", value: "12" },
-  { label: "Divisions", value: "8" },
-  { label: "Employees", value: "5,000+" },
-];
-
-const values = [
-  { name: "Integrity", icon: ShieldCheck, desc: "Upholding the highest moral and ethical standards in every transaction." },
-  { name: "Innovation", icon: Zap, desc: "Pioneering new technologies and methodologies to lead global markets." },
-  { name: "Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
-  { name: "Sustainability", icon: Leaf, desc: "Commitment to long-term environmental and economic resilience." },
-  { name: "Social Impact", icon: Heart, desc: "Creating measurable value and upliftment for our local communities." },
-];
+import { divisions, stats, values } from "@/lib/data";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -61,14 +36,14 @@ export default function HomePage() {
       <motion.div className="scroll-progress" style={{ scaleX }} />
       
       {/* ───── HERO ───── */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Base Layer: Deep Navy Marble */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-20 brightness-[0.5]"
+            className="object-cover opacity-30 brightness-[0.7]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
@@ -92,7 +67,7 @@ export default function HomePage() {
               alt="Excellence Group Logo" 
               width={180}
               height={180}
-              className="h-32 sm:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
+              className="h-48 sm:h-64 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
               priority
             />
           </motion.div>

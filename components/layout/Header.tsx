@@ -7,26 +7,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { navLinks } from "@/lib/data";
 
-const divisions = [
-  { name: "Financial Advisory", href: "/financial" },
-  { name: "Logistics Division", href: "/logistics" },
-  { name: "Sustainability Division", href: "/sustainability" },
-  { name: "Water Bottling Division", href: "/water" },
-  { name: "Heavy Plant & Construction", href: "/heavy-plant" },
-  { name: "Agriculture Division", href: "/agriculture" },
-  { name: "Mall & Property Development", href: "/mall-property" },
-  { name: "Insurance Division", href: "/insurance" },
-];
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Divisions", href: "#", dropdown: divisions },
-  { name: "Sustainability", href: "/sustainability" },
-  { name: "Investors", href: "/investors" },
-  { name: "Tenders", href: "/tenders" },
-];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
