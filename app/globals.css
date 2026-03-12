@@ -6,13 +6,34 @@
 
 :root {
   --primary: #d4af35;
-  --primary-light: #e8cc6a;
-  --primary-dark: #a88920;
-  --dark-bg: #0a0f1e;
-  --dark-card: #101729;
-  --dark-elevated: #161f35;
-  --dark-border: #1e2d4d;
+  --primary-light: #fbeea4;
+  --primary-dark: #8c7320;
+  --dark-bg: #05070a;
+  --dark-card: #0a0c10;
+  --dark-elevated: #0f1218;
+  --dark-border: #1a1e26;
   --text-muted: #8090b0;
+  --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.05); }
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary);
+  transform-origin: 0%;
+  z-index: 100;
 }
 
 * {
@@ -174,17 +195,53 @@ body {
 .luxury-gradient-gold {
   background: linear-gradient(
     135deg, 
-    #8a6d3b 0%, 
-    #e8cc6a 25%, 
-    #d4af35 50%, 
-    #e8cc6a 75%, 
-    #8a6d3b 100%
+    #bf953f 0%, 
+    #fcf6ba 20%, 
+    #b38728 40%, 
+    #fbf5b7 60%, 
+    #aa771c 80%, 
+    #bf953f 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 6s linear infinite;
+  animation: shimmer 5s linear infinite;
+}
+
+.gold-metallic-solid {
+  background: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 50%,
+    #aa771c 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-metallic-solid::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent 0%,
+    transparent 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 55%,
+    transparent 100%
+  );
+  transform: rotate(-15deg);
+  animation: sweep 4s infinite;
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-100%) rotate(-15deg); }
+  100% { transform: translateX(100%) rotate(-15deg); }
 }
 
 @keyframes shimmer {
