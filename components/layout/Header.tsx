@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { navLinks } from "@/lib/data";
+import { navLinks, divisions } from "@/lib/data";
 
 
 export default function Header() {
@@ -40,6 +40,7 @@ export default function Header() {
                 src="/logo.png"
                 alt="Excellence Group Logo"
                 fill
+                sizes="2.5rem"
                 className="object-contain transition-transform duration-500 group-hover:scale-110"
               />
             </div>
@@ -74,7 +75,7 @@ export default function Header() {
                         className="absolute top-full left-0 w-64 bg-dark/95 backdrop-blur-2xl border border-white/10 p-4 shadow-2xl"
                       >
                         <div className="grid gap-2">
-                          {divisions.map((div) => (
+                          {link.dropdown.map((div) => (
                             <Link
                               key={div.href}
                               href={div.href}

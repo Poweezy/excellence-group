@@ -65,24 +65,7 @@ export default function SustainabilityPage() {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="py-32 bg-dark-card border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { value: "500+", label: "Youth Scholarships" },
-              { value: "100%", label: "Local Sourcing" },
-              { value: "30%", label: "Carbon Reduction" },
-              { value: "12", label: "Community Hubs" }
-            ].map((stat, i) => (
-              <AnimatedSection key={stat.label} delay={i * 0.1} className="text-center">
-                <div className="luxury-text-display text-5xl font-bold text-secondary mb-4">{stat.value}</div>
-                <div className="text-white/40 text-[10px] uppercase tracking-[0.3em] luxury-text-accent">{stat.label}</div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="py-24 bg-dark-bg text-center">

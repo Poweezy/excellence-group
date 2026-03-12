@@ -186,58 +186,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───── GLOBAL PRESENCE (Minimalist Footprint) ───── */}
-      <section className="py-32 bg-dark-elevated relative overflow-hidden">
-        <div className="absolute inset-0 bg-marble-luxury opacity-5 contrast-125" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
-            <AnimatedSection className="lg:w-1/2" direction="left">
-              <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Global Footprint</span>
-              <h2 className="luxury-text-display text-5xl lg:text-7xl text-white mb-8">
-                Strategic <span className="italic">Saturation.</span>
-              </h2>
-              <p className="text-slate-400 text-lg font-light leading-relaxed mb-10 luxury-text-sans">
-                With a presence in 12 countries, Excellence Group operates at the intersection of emerging opportunities and established markets, ensuring diversified resilience.
-              </p>
-              <div className="grid grid-cols-2 gap-8">
-                <div>
-                  <div className="text-primary text-2xl font-display mb-2">Johannesburg</div>
-                  <div className="text-slate-500 text-xs luxury-text-accent">Global Headquarters</div>
-                </div>
-                <div>
-                  <div className="text-primary text-2xl font-display mb-2">Dubai</div>
-                  <div className="text-slate-500 text-xs luxury-text-accent">Financial Hub</div>
-                </div>
-                <div>
-                  <div className="text-primary text-2xl font-display mb-2">London</div>
-                  <div className="text-slate-500 text-xs luxury-text-accent">European Relations</div>
-                </div>
-                <div>
-                  <div className="text-primary text-2xl font-display mb-2">Singapore</div>
-                  <div className="text-slate-500 text-xs luxury-text-accent">Asia-Pacific Logistics</div>
-                </div>
-              </div>
-            </AnimatedSection>
-            
-            <AnimatedSection className="lg:w-1/2 relative" direction="right">
-              {/* Minimalist Map Visualization Placeholder with Icons */}
-              <div className="aspect-[4/3] border border-white/5 bg-white/[0.01] rounded-2xl flex items-center justify-center p-12 overflow-hidden group">
-                <div className="absolute inset-0 bg-primary/5 blur-[80px] opacity-0 group-hover:opacity-40 transition-opacity duration-1000" />
-                <Globe className="w-64 h-64 text-primary/10 animate-pulse-slow" strokeWidth={0.5} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="relative w-full h-full">
-                      {/* Abstract Dots for Presence */}
-                      <MapPin className="absolute top-[30%] left-[20%] w-4 h-4 text-primary animate-bounce" />
-                      <MapPin className="absolute top-[60%] left-[45%] w-4 h-4 text-primary animate-bounce [animation-delay:0.5s]" />
-                      <MapPin className="absolute top-[40%] left-[70%] w-4 h-4 text-primary animate-bounce [animation-delay:1s]" />
-                      <MapPin className="absolute top-[15%] left-[55%] w-4 h-4 text-primary animate-bounce [animation-delay:1.5s]" />
-                   </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+
 
       <section className="bg-dark relative py-24 overflow-hidden border-y border-white/5">
         <div className="absolute inset-0 bg-radial-luxury opacity-30" />
