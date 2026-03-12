@@ -107,7 +107,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
             className="max-w-5xl"
           >
             <h1 className="luxury-text-display text-5xl sm:text-8xl lg:text-[9rem] font-bold mb-10 tracking-tighter leading-[0.85]">
@@ -270,6 +270,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <section className="bg-dark relative py-24 overflow-hidden border-y border-white/5">
         <div className="absolute inset-0 bg-radial-luxury opacity-30" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -340,6 +341,32 @@ export default function HomePage() {
                 ))}
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ───── CORE VALUES (Refined Cards) ───── */}
+      <section className="py-32 bg-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center mb-24">
+            <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Our DNA</span>
+            <h2 className="luxury-text-display text-5xl lg:text-7xl text-white">
+              Institutional <span className="italic font-light">Integrity.</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((v, i) => (
+              <AnimatedSection key={v.name} delay={i * 0.1}>
+                <div className="group p-10 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-700 h-full flex flex-col items-center text-center">
+                  <div className="w-16 h-16 border border-primary/20 rotate-45 flex items-center justify-center mb-10 group-hover:border-primary/60 group-hover:bg-primary/5 transition-all duration-700">
+                    <v.icon className="-rotate-45 w-6 h-6 text-primary" strokeWidth={1} />
+                  </div>
+                  <h3 className="luxury-text-accent text-white mb-4 text-lg">{v.name}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed font-light luxury-text-sans">{v.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
