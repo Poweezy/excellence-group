@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Heart, Users, ShieldCheck, Zap, Award, Leaf } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Excellence Group's history, vision, values, and the leadership team driving Africa's growth.",
+    "Learn about Excellence Group (Pty) Ltd - a premium and resilient diversified enterprise driving growth across Africa.",
 };
 
 const values = [
-  { icon: Target, title: "Excellence", desc: "We set the highest standards in everything we do, from governance to client service." },
-  { icon: Eye, title: "Integrity", desc: "Honesty and transparency guide every business decision and relationship we build." },
-  { icon: Heart, title: "Sustainability", desc: "Long-term thinking shapes every strategy to protect tomorrow's opportunities." },
-  { icon: Users, title: "People First", desc: "Our 5,000+ team members are our greatest asset and competitive advantage." },
+  { icon: ShieldCheck, title: "Integrity", desc: "Honesty and transparency guide every business decision and relationship we build." },
+  { icon: Zap, title: "Innovation", desc: "Pioneering new technologies and methodologies to lead global markets." },
+  { icon: Award, title: "Operational Excellence", desc: "We set the highest standards in everything we do, from governance to client service." },
+  { icon: Leaf, title: "Sustainability", desc: "Long-term thinking shapes every strategy to protect tomorrow's opportunities." },
+  { icon: Heart, title: "Social Impact", desc: "Creating measurable value and upliftment for our local communities in Eswatini." },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-dark-bg">
       {/* Hero */}
       <section className="py-24 animated-bg relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="max-w-3xl">
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">About Us</span>
-            <h1 className="mt-3 font-display text-5xl lg:text-6xl font-bold text-white leading-tight">
-              The Story Behind <span className="gold-shimmer">Excellence</span>
+            <span className="text-primary text-sm font-medium uppercase tracking-widest">Digital Flagship</span>
+            <h1 className="mt-3 luxury-text-display text-5xl lg:text-7xl font-bold text-white leading-tight">
+              Diversified Strength. <br />
+              <span className="gold-shimmer italic font-light">Unified Vision.</span>
             </h1>
-            <p className="mt-6 text-slate-400 text-xl leading-relaxed">
-              Since our founding, Excellence Group has been on a mission to build a world-class
-              diversified conglomerate rooted in African values and global ambitions.
+            <p className="mt-6 text-slate-400 text-xl font-light leading-relaxed luxury-text-sans">
+              Since our founding, Excellence Group (Pty) Ltd has served as a resilient, 
+              forward-thinking enterprise anchored in the future economy of Eswatini.
             </p>
           </AnimatedSection>
         </div>
@@ -37,29 +39,29 @@ export default function AboutPage() {
       <div className="section-divider" />
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-dark">
+      <section className="py-24 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            <AnimatedSection direction="left" className="p-8 rounded-2xl gold-border bg-dark-card">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-primary" />
+            <AnimatedSection direction="left" className="p-10 rounded-2xl gold-border bg-dark-card group hover:bg-dark-elevated transition-all">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <Target className="w-7 h-7 text-primary" strokeWidth={1} />
               </div>
-              <h2 className="font-display text-3xl font-bold text-white mb-4">Our Mission</h2>
-              <p className="text-slate-400 leading-relaxed">
+              <h2 className="luxury-text-display text-4xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-slate-400 leading-relaxed text-lg font-light luxury-text-sans">
                 To deliver exceptional, sustainable value to our stakeholders by leveraging our diversified
                 business portfolio, world-class talent, and deep pan-African expertise to drive meaningful
                 economic transformation.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection direction="right" delay={0.1} className="p-8 rounded-2xl gold-border bg-dark-card">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                <Eye className="w-6 h-6 text-primary" />
+            <AnimatedSection direction="right" delay={0.1} className="p-10 rounded-2xl gold-border bg-dark-card group hover:bg-dark-elevated transition-all">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <Eye className="w-7 h-7 text-primary" strokeWidth={1} />
               </div>
-              <h2 className="font-display text-3xl font-bold text-white mb-4">Our Vision</h2>
-              <p className="text-slate-400 leading-relaxed">
-                To be Africa&apos;s most respected and impactful diversified conglomerate — a beacon of
-                excellence that inspires the next generation of African business leaders and entrepreneurs.
+              <h2 className="luxury-text-display text-4xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-slate-400 leading-relaxed text-lg font-light luxury-text-sans">
+                To be a leading diversified enterprise that anchors the future economy of Eswatini through 
+                integrity, innovation, and unwavering operational excellence.
               </p>
             </AnimatedSection>
           </div>
@@ -67,23 +69,54 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-dark-card">
+      <section className="py-24 bg-dark-card border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Values</span>
-            <h2 className="mt-3 font-display text-4xl font-bold text-white">
-              Principles That Guide Us
+          <AnimatedSection className="text-center mb-20">
+            <span className="text-primary text-sm font-medium uppercase tracking-widest">Our DNA</span>
+            <h2 className="mt-3 luxury-text-display text-5xl lg:text-7xl font-bold text-white">
+              Core <span className="italic font-light">Values.</span>
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {values.map(({ icon: Icon, title, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.1}>
-                <div className="p-6 rounded-2xl gold-border bg-dark h-full flex flex-col">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div className="p-8 rounded-2xl gold-border bg-dark h-full flex flex-col group hover:bg-dark-elevated transition-all">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" strokeWidth={1} />
                   </div>
-                  <h3 className="font-semibold text-lg text-white mb-2">{title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed flex-grow">{desc}</p>
+                  <h3 className="luxury-text-accent text-[11px] text-white/50 mb-3 tracking-widest group-hover:text-primary transition-colors">{title}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed flex-grow luxury-text-sans font-light">{desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-32 bg-dark-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-20">
+            <span className="text-primary text-sm font-medium uppercase tracking-widest text-center block">Leadership Steering</span>
+            <h2 className="mt-3 luxury-text-display text-5xl lg:text-7xl font-bold text-white text-center">
+              The Visionaries Behind <span className="italic font-light">Excellence.</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {[1, 2, 3].map((i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="group relative overflow-hidden rounded-2xl gold-border bg-dark-card aspect-[4/5] flex flex-col justify-end p-10">
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent z-10" />
+                  <div className="relative z-20">
+                    <div className="w-12 h-[1px] bg-primary mb-6" />
+                    <h3 className="luxury-text-display text-3xl text-white">Executive Member {i}</h3>
+                    <p className="text-primary text-xs uppercase tracking-[0.3em] font-medium mt-3 mb-6">Board of Directors</p>
+                    <p className="text-slate-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700 luxury-text-sans font-light">
+                      Senior leadership at Excellence Group ensures the unified vision remains anchored in operational excellence 
+                      while driving social impact across Eswatini and Southern Africa.
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}

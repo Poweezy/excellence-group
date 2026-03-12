@@ -23,8 +23,9 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Divisions", href: "#", dropdown: divisions },
+  { name: "Sustainability", href: "/sustainability" },
   { name: "Investors", href: "/investors" },
-  { name: "Careers", href: "/careers" },
+  { name: "Tenders", href: "/tenders" },
 ];
 
 export default function Header() {

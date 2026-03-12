@@ -5,16 +5,16 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Excellence Group – Diversified Conglomerate | South Africa",
+    default: "Excellence Group (Pty) Ltd – Diversified Conglomerate | Eswatini",
     template: "%s | Excellence Group",
   },
   description:
-    "Excellence Group is a premier diversified conglomerate driving sustainable growth across financial advisory, logistics, sustainability, and more.",
-  keywords: ["Excellence Group", "South Africa", "conglomerate", "financial advisory", "logistics"],
+    "Excellence Group (Pty) Ltd is a premier diversified African enterprise built on integrity, innovation, and operational excellence, driving growth across Eswatini and Southern Africa.",
+  keywords: ["Excellence Group", "Eswatini", "conglomerate", "Manzini", "diversified enterprise"],
   openGraph: {
     type: "website",
-    locale: "en_ZA",
-    url: "https://excellencegroup.co.za",
+    locale: "en_SZ",
+    url: "https://excellencegroup.co.sz",
     siteName: "Excellence Group",
   },
 };

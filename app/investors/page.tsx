@@ -1,33 +1,28 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { TrendingUp, Shield, BarChart3, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { TrendingUp, FileText, BarChart3, ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Investors",
-  description: "Excellence Group investor relations, financial reports, and shareholder information.",
+export const metadata: Metadata = { 
+  title: "Investor Relations",
+  description: "Transparency. Growth. Reliability. excellence Group's strategic foresight and financial integrity."
 };
-
-const highlights = [
-  { label: "Market Cap", value: "R 8.4B", sub: "As of Q4 2024" },
-  { label: "Revenue Growth", value: "32%", sub: "Year-on-Year" },
-  { label: "EBITDA Margin", value: "24.5%", sub: "FY2024" },
-  { label: "Dividend Yield", value: "4.2%", sub: "Annual" },
-];
 
 export default function InvestorsPage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-dark-bg">
+      {/* Hero */}
       <section className="py-24 animated-bg relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="max-w-3xl">
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">Investors</span>
-            <h1 className="mt-3 font-display text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Investor <span className="gold-shimmer">Relations</span>
+            <span className="text-secondary text-sm font-medium uppercase tracking-[0.4em]">Investor Relations</span>
+            <h1 className="mt-6 luxury-text-display text-5xl lg:text-7xl font-bold text-white leading-tight">
+              Transparency. <br />
+              <span className="gold-shimmer italic font-light">Growth. Reliability.</span>
             </h1>
-            <p className="mt-6 text-slate-400 text-xl leading-relaxed">
-              Transparent governance, consistent performance, and long-term value creation
-              for our shareholders.
+            <p className="mt-8 text-slate-400 text-xl font-light leading-relaxed luxury-text-sans">
+              Excellence Group (Pty) Ltd maintains a steadfast commitment to financial integrity 
+              and strategic foresight — ensuring sustainable value for our global investment partners.
             </p>
           </AnimatedSection>
         </div>
@@ -35,50 +30,77 @@ export default function InvestorsPage() {
 
       <div className="section-divider" />
 
-      <section className="py-16 bg-dark-card">
+      {/* Pillars */}
+      <section className="py-24 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {highlights.map((h, i) => (
-              <AnimatedSection key={h.label} delay={i * 0.08}>
-                <div className="p-6 rounded-2xl gold-border bg-dark text-center">
-                  <div className="font-display text-4xl font-bold gold-shimmer">{h.value}</div>
-                  <div className="text-white text-sm font-semibold mt-2">{h.label}</div>
-                  <div className="text-slate-500 text-xs mt-1">{h.sub}</div>
+          <div className="grid lg:grid-cols-3 gap-12">
+            {[
+              { 
+                icon: Shield, 
+                title: "Financial Integrity", 
+                desc: "Rigorous auditing and transparent reporting standards that build trust and ensure long-term stability."
+              },
+              { 
+                icon: TrendingUp, 
+                title: "Strategic Foresight", 
+                desc: "Data-driven investment strategies that leverage African market trends and emerging opportunities."
+              },
+              { 
+                icon: BarChart3, 
+                title: "Operational Reliability", 
+                desc: "Consistent delivery across our diversified portfolio, backed by world-class governance frameworks."
+              }
+            ].map((pillar, i) => (
+              <AnimatedSection key={pillar.title} delay={i * 0.1} className="p-10 rounded-2xl gold-border bg-dark-card group hover:bg-dark-elevated transition-all">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1} />
                 </div>
+                <h3 className="luxury-text-display text-2xl text-white mb-6">{pillar.title}</h3>
+                <p className="text-slate-400 leading-relaxed font-light luxury-text-sans">
+                  {pillar.desc}
+                </p>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-dark">
+      {/* Resources */}
+      <section className="py-24 bg-dark-card border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="mb-12">
-            <h2 className="font-display text-3xl font-bold text-white">Reports & Filings</h2>
+          <AnimatedSection className="mb-16">
+             <h2 className="luxury-text-display text-4xl font-bold text-white">Investor <span className="italic font-light">Resources.</span></h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: FileText, title: "Annual Report 2024", desc: "Comprehensive group performance review" },
-              { icon: BarChart3, title: "Interim Results H2", desc: "Half-year financial highlights" },
-              { icon: TrendingUp, title: "ESG Report 2024", desc: "Sustainability and governance metrics" },
-            ].map(({ icon: Icon, title, desc }) => (
-              <AnimatedSection key={title}>
-                <div className="group p-6 rounded-2xl gold-border bg-dark-card hover:bg-dark-elevated transition-all cursor-pointer">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-white mb-2 group-hover:text-primary transition-colors">{title}</h3>
-                  <p className="text-slate-400 text-sm">{desc}</p>
-                  <div className="flex items-center gap-1 text-primary text-sm font-medium mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Download PDF <ArrowRight className="w-4 h-4" />
-                  </div>
+              "Annual Report 2025",
+              "Interim Financial Results",
+              "Strategic Overview Document",
+              "Corporate Governance Framework"
+            ].map((doc, i) => (
+              <div key={doc} className="flex items-center justify-between p-6 rounded-xl border border-white/5 bg-dark hover:border-secondary/30 transition-all cursor-pointer group">
+                <span className="text-white font-medium luxury-text-sans">{doc}</span>
+                <div className="p-2 rounded-lg bg-white/5 group-hover:bg-secondary/20 transition-colors">
+                   <ArrowRight className="w-4 h-4 text-white group-hover:text-secondary transition-colors" />
                 </div>
-              </AnimatedSection>
+              </div>
             ))}
           </div>
-          <AnimatedSection className="mt-12 text-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-dark font-bold hover:bg-primary-light transition-all shadow-gold-sm hover:shadow-gold-md group">
-              Contact Investor Relations <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-dark-bg text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <h2 className="luxury-text-display text-3xl font-bold text-white mb-8">
+              Connect with our <span className="italic font-light">Investor Relations</span> team.
+            </h2>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 text-secondary border border-secondary/20 px-10 py-5 hover:bg-secondary/5 transition-all luxury-text-accent text-[11px] uppercase tracking-[0.2em]"
+            >
+              Inquire Now <ArrowRight className="w-4 h-4" />
             </Link>
           </AnimatedSection>
         </div>

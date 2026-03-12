@@ -27,8 +27,9 @@ const stats = [
 const values = [
   { name: "Integrity", icon: ShieldCheck, desc: "Upholding the highest moral and ethical standards in every transaction." },
   { name: "Innovation", icon: Zap, desc: "Pioneering new technologies and methodologies to lead global markets." },
-  { name: "Impact", icon: Target, desc: "Creating sustainable value for our shareholders and communities." },
-  { name: "Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
+  { name: "Operational Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
+  { name: "Sustainability", icon: Leaf, desc: "Commitment to long-term environmental and economic resilience." },
+  { name: "Social Impact", icon: Heart, desc: "Creating measurable value and upliftment for our local communities." },
 ];
 
 const staggerContainer = {
@@ -60,109 +61,101 @@ export default function HomePage() {
       <motion.div className="scroll-progress" style={{ scaleX }} />
       
       {/* ───── HERO ───── */}
-      <section className="relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden">
-        {/* Base Layer: Dark Marble */}
+      <section className="relative min-h-[100vh] flex items-center justify-center pt-24 overflow-hidden">
+        {/* Base Layer: Deep Navy Marble */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-30 brightness-[0.4]"
+            className="object-cover opacity-20 brightness-[0.5]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark" />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
         </div>
         
-        {/* Architectural Slanted Panels (Frame style - No overlap with center) */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div 
-            className="absolute -left-[20%] top-0 h-[150%] w-[50%] bg-dark/60 skew-x-[-15deg] border-r border-primary/20 shadow-[20px_0_50px_rgba(0,0,0,0.8)] backdrop-blur-[2px]"
-          />
-          <div 
-            className="absolute -right-[20%] top-0 h-[150%] w-[50%] bg-dark/40 skew-x-[-15deg] border-l border-primary/20 shadow-[-20px_0_50px_rgba(0,0,0,0.8)] backdrop-blur-[2px]"
-          />
+        {/* Architectural Framing */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
+          <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />
+          <div className="absolute -right-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-l border-primary/10 backdrop-blur-sm" />
         </div>
 
-        {/* Dynamic Light Casting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="mb-10 relative"
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="mb-12"
           >
-            <div className="absolute -inset-20 bg-primary/10 blur-[120px] rounded-full opacity-30 animate-pulse" />
             <Image 
               src="/logo.png" 
               alt="Excellence Group Logo" 
-              width={220}
-              height={220}
-              className="h-40 sm:h-56 w-auto object-contain relative z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
+              width={240}
+              height={240}
+              className="h-48 sm:h-64 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
               priority
             />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             className="max-w-5xl"
           >
-            <h1 className="luxury-text-display text-5xl sm:text-8xl lg:text-[9rem] font-bold mb-10 tracking-tighter leading-[0.85]">
-              <span className="luxury-gradient-gold block pb-4">Diversified Strength.</span>
-              <span className="text-white/80 italic block">Unified Vision.</span>
+            <h1 className="luxury-text-display text-5xl sm:text-7xl lg:text-9xl font-bold mb-8 tracking-tighter leading-[0.9]">
+              <span className="luxury-gradient-gold block pb-2">Diversified Strength.</span>
+              <span className="text-white italic block">Unified Vision.</span>
             </h1>
             
-            <div className="flex items-center gap-8 justify-center mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
-              <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-primary/40" />
-              <p className="luxury-text-accent text-primary-light/70 text-[11px] sm:text-sm tracking-[0.4em]">
-                PREMIER MULTIDISCIPLINARY CONGLOMERATE
-              </p>
-              <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-primary/40" />
-            </div>
+            <p className="text-white/80 text-lg sm:text-xl font-light max-w-2xl mx-auto mb-16 luxury-text-sans tracking-wide">
+              A premium, resilient, forward-thinking diversified African enterprise driving sustainable growth across Eswatini and Southern Africa.
+            </p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              className="flex flex-col sm:flex-row gap-10 justify-center items-center"
-            >
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <Link
                 href="/about"
-                className="group relative px-14 py-6 overflow-hidden"
+                className="group relative px-12 py-5 gold-metallic-solid min-w-[240px]"
               >
-                <div className="absolute inset-0 gold-metallic-solid" />
-                <span className="relative z-10 text-dark font-black luxury-text-accent text-[12px] tracking-[0.3em]">
-                  DISCOVER THE GROUP
+                <span className="relative z-10 text-dark font-bold luxury-text-accent tracking-[0.2em]">
+                  OUR CORE POSITIONING
                 </span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
               </Link>
               
               <Link
                 href="/contact"
-                className="group relative px-14 py-6 border border-white/20 hover:border-primary/40 transition-all duration-700 overflow-hidden"
+                className="group relative px-12 py-5 border border-primary/40 hover:border-primary transition-all duration-500 min-w-[240px]"
               >
-                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors" />
-                <span className="relative z-10 text-white/60 group-hover:text-white luxury-text-accent text-[12px] tracking-[0.3em] transition-colors">
-                  GET IN TOUCH
+                <span className="relative z-10 text-primary group-hover:text-white luxury-text-accent tracking-[0.2em] transition-colors">
+                  CONSULT WITH US
                 </span>
               </Link>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 text-primary/30">
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-primary/40">
           <motion.div 
-            animate={{ y: [0, 15, 0] }} 
+            animate={{ y: [0, 10, 0] }} 
             transition={{ repeat: Infinity, duration: 2.5 }}
             className="flex flex-col items-center"
           >
-            <span className="luxury-text-accent text-[9px] mb-4">Architecture of Excellence</span>
-            <div className="w-[1px] h-16 bg-gradient-to-b from-primary/60 via-primary/20 to-transparent" />
+            <ChevronDown className="w-6 h-6" />
           </motion.div>
+        </div>
+      </section>
+
+      {/* ───── VISION QUOTE ───── */}
+      <section className="py-32 bg-dark-bg relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <AnimatedSection>
+            <div className="w-16 h-[1px] bg-primary/40 mx-auto mb-12" />
+            <blockquote className="luxury-text-display text-3xl sm:text-5xl lg:text-6xl text-white italic font-light leading-snug">
+              "To be a leading diversified enterprise that anchors the future economy of Eswatini through integrity, innovation, and unwavering operational excellence."
+            </blockquote>
+            <div className="w-16 h-[1px] bg-primary/40 mx-auto mt-12" />
+          </AnimatedSection>
         </div>
       </section>
 
@@ -346,12 +339,12 @@ export default function HomePage() {
       </section>
 
       {/* ───── CORE VALUES (Refined Cards) ───── */}
-      <section className="py-32 bg-dark">
+      <section className="py-32 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center mb-24">
-            <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Our DNA</span>
+            <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Institutional Framework</span>
             <h2 className="luxury-text-display text-5xl lg:text-7xl text-white">
-              Institutional <span className="italic font-light">Integrity.</span>
+              Core <span className="italic font-light">Values.</span>
             </h2>
           </div>
 
@@ -367,6 +360,39 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───── IMPACT TEASER ───── */}
+      <section className="py-32 bg-dark-card relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <div className="lg:w-1/2">
+               <span className="luxury-text-accent text-secondary tracking-[0.4em] mb-4 block">Sustainability</span>
+               <h2 className="luxury-text-display text-5xl lg:text-7xl text-white mb-8">
+                Growth That <span className="italic">Uplifts Communities.</span>
+               </h2>
+               <p className="text-slate-400 text-lg font-light leading-relaxed mb-10 luxury-text-sans">
+                  Our success is measured by the progress of the people we serve. From job creation to environmental stewardship, we are committed to Eswatini's long-term prosperity.
+               </p>
+               <Link
+                href="/sustainability"
+                className="inline-flex items-center gap-3 text-secondary border border-secondary/20 px-8 py-4 hover:bg-secondary/5 transition-all luxury-text-accent text-[11px]"
+              >
+                Our Impact Report <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="lg:w-1/2 grid grid-cols-2 gap-4">
+               <div className="aspect-square bg-white/[0.03] border border-white/5 p-8 flex flex-col justify-end">
+                  <div className="text-secondary text-3xl font-display mb-2">500+</div>
+                  <div className="text-white/40 text-[10px] luxury-text-accent">Jobs Created</div>
+               </div>
+               <div className="aspect-square bg-white/[0.03] border border-white/5 p-8 flex flex-col justify-end translate-y-8">
+                  <div className="text-secondary text-3xl font-display mb-2">100%</div>
+                  <div className="text-white/40 text-[10px] luxury-text-accent">Local Sourcing</div>
+               </div>
+            </div>
           </div>
         </div>
       </section>

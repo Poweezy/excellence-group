@@ -47,21 +47,21 @@ export default function Footer() {
               <span className="font-display font-bold text-xl text-white">Excellence Group</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              A diversified conglomerate driving sustainable growth across Africa and beyond.
-              Building prosperity through excellence, integrity, and innovation.
+              A premium, resilient, forward-thinking diversified African enterprise built on integrity, innovation, and operational excellence. 
+              Driving measurable social impact across Eswatini and Southern Africa.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
-                <span>info@excellencegroup.co.za</span>
+                <span>info@excellencegroup.co.sz</span>
               </div>
               <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
-                <span>+27 (0) 11 000 0000</span>
+                <span>+268 3502 3746</span>
               </div>
               <div className="flex items-center gap-3 text-slate-400 text-sm">
                 <MapPin className="w-4 h-4 text-primary shrink-0" />
-                <span>Johannesburg, South Africa</span>
+                <span>Manzini, Eswatini</span>
               </div>
             </div>
             <div className="flex gap-3 mt-8">

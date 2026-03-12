@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --primary: #d4af35;
+  --primary: #D4AF37;
   --primary-light: #fbeea4;
-  --primary-dark: #8c7320;
-  --dark-bg: #05070a;
-  --dark-card: #0a0c10;
-  --dark-elevated: #0f1218;
-  --dark-border: #1a1e26;
+  --primary-dark: #A88920;
+  --secondary: #10B981;
+  --dark-bg: #0A2540;
+  --dark-card: #0D2D4D;
+  --dark-elevated: #11355A;
+  --dark-border: #1B446D;
   --text-muted: #8090b0;
   --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -57,7 +58,7 @@ body {
 }
 
 .luxury-text-display {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   letter-spacing: -0.01em;
 }
 
