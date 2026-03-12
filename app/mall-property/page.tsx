@@ -14,12 +14,12 @@ export default function MallPage() {
       subtitle="Creating Spaces Where Communities Thrive"
       description="Our Mall & Property Development Division develops, owns, and manages premium retail, commercial, and mixed-use properties across Southern Africa — creating dynamic spaces that drive economic activity."
       services={[
-        { title: "Retail Mall Development", desc: "Ground-up development of community, regional, and super-regional malls." },
-        { title: "Commercial Office Parks", desc: "A-grade commercial office developments in prime business nodes." },
-        { title: "Mixed-Use Developments", desc: "Integrated residential, retail, and commercial precinct development." },
-        { title: "Property Management", desc: "Full-service property management including tenant relations and maintenance." },
-        { title: "Leasing & Tenant Mix", desc: "Strategic retail and commercial tenant mix curation and leasing." },
-        { title: "Property Finance", desc: "Development finance and structured property investment solutions." },
+        { title: "Retail Space Leasing", desc: "Strategic retail space leasing solutions for shopping centers, malls, and standalone retail properties." },
+        { title: "Commercial Property Management", desc: "Full-service property management including maintenance, operations, and facility management for commercial assets." },
+        { title: "Mixed-Use Property Development", desc: "Integrated development of residential, retail, and commercial spaces creating vibrant community hubs." },
+        { title: "Tenant Relationship Management", desc: "Dedicated tenant support, lease administration, and relationship management ensuring long-term partnerships." },
+        { title: "Infrastructure Investment", desc: "Strategic investment in property infrastructure, upgrades, and value-enhancement projects." },
+        { title: "Asset Optimization", desc: "Portfolio analysis, tenant mix curation, and strategic planning to maximize property value and returns." },
       ]}
     />
   );
