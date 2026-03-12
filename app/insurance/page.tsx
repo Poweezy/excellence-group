@@ -13,12 +13,6 @@ export default function InsurancePage() {
       title="Insurance Division"
       subtitle="Comprehensive Risk Solutions for Businesses & Individuals"
       description="Our Insurance Division provides tailored short-term, life, and commercial insurance solutions, helping clients manage risk with confidence. We partner with leading underwriters to offer competitive, comprehensive cover."
-      stats={[
-        { value: "50,000+", label: "Policies Active" },
-        { value: "R 2.3B", label: "Gross Written Premium" },
-        { value: "24h", label: "Claims Response" },
-        { value: "4.8/5", label: "Client Satisfaction" },
-      ]}
       services={[
         { title: "Short-Term Insurance", desc: "Vehicle, property, and asset insurance for individuals and businesses." },
         { title: "Life & Funeral Cover", desc: "Comprehensive life assurance, disability, and funeral cover solutions." },

@@ -13,12 +13,6 @@ export default function FinancialPage() {
       title="Financial Advisory"
       subtitle="Capital Solutions for Africa's Ambitions"
       description="Our Financial Advisory division delivers world-class wealth management, capital raising, and strategic financial consulting to corporates, governments, and high-net-worth individuals across Africa."
-      stats={[
-        { value: "R 50B+", label: "Assets Under Advisory" },
-        { value: "500+", label: "Corporate Clients" },
-        { value: "15+", label: "Years Experience" },
-        { value: "98%", label: "Client Retention" },
-      ]}
       services={[
         { title: "Wealth Management", desc: "Bespoke investment strategies tailored to your financial goals and risk appetite." },
         { title: "Capital Raising", desc: "Debt and equity solutions for growth-stage and established enterprises." },

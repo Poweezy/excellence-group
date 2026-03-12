@@ -13,12 +13,6 @@ export default function WaterPage() {
       title="Water Bottling Division"
       subtitle="Pure. Sustainable. Refreshing."
       description="Our Water Bottling Division sources, purifies, and distributes premium-quality drinking water, meeting the growing demand for clean, safe water across Africa with world-class bottling facilities."
-      stats={[
-        { value: "50M+", label: "Litres Produced/Year" },
-        { value: "3", label: "Bottling Plants" },
-        { value: "6", label: "Countries Served" },
-        { value: "ISO 22000", label: "Food Safety Certified" },
-      ]}
       services={[
         { title: "Premium Water Brands", desc: "Still, sparkling, and flavoured water products for retail and hospitality." },
         { title: "Private Label Bottling", desc: "Custom-branded bottling solutions for corporate, hotel, and event clients." },

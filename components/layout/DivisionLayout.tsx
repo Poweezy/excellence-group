@@ -7,11 +7,6 @@ interface Service {
   desc: string;
 }
 
-interface Stat {
-  value: string;
-  label: string;
-}
-
 interface DivisionLayoutProps {
   badge: string;
   title: string;
@@ -19,7 +14,6 @@ interface DivisionLayoutProps {
   icon: LucideIcon;
   description: string;
   services: Service[];
-  stats: Stat[];
   color?: string;
 }
 
@@ -30,7 +24,6 @@ export default function DivisionLayout({
   icon: Icon,
   description,
   services,
-  stats,
 }: DivisionLayoutProps) {
   return (
     <div className="overflow-hidden">
@@ -68,24 +61,6 @@ export default function DivisionLayout({
       </section>
 
       <div className="section-divider" />
-
-      {/* Stats */}
-      {stats.length > 0 && (
-        <section className="py-16 bg-dark-card">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {stats.map((s, i) => (
-                <AnimatedSection key={s.label} delay={i * 0.08}>
-                  <div className="text-center p-6 rounded-2xl gold-border bg-dark">
-                    <div className="luxury-text-display text-5xl font-bold text-secondary mb-3">{s.value}</div>
-                    <div className="text-white/40 text-[10px] uppercase tracking-[0.3em] luxury-text-accent">{s.label}</div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Services */}
       <section className="py-24 bg-dark">

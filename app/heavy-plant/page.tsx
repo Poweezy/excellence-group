@@ -13,12 +13,6 @@ export default function HeavyPlantPage() {
       title="Heavy Plant & Construction"
       subtitle="Building Africa's Infrastructure, Steel by Steel"
       description="Our Heavy Plant & Construction Division delivers large-scale civil engineering, mining infrastructure, and commercial construction projects. We bring expertise, equipment, and execution excellence to every site."
-      stats={[
-        { value: "R 2B+", label: "Projects Delivered" },
-        { value: "200+", label: "Plant Equipment" },
-        { value: "50+", label: "Major Projects" },
-        { value: "ISO 9001", label: "Quality Certified" },
-      ]}
       services={[
         { title: "Civil Engineering", desc: "Roads, bridges, dams, and large-scale civil infrastructure projects." },
         { title: "Mining Infrastructure", desc: "Mine development, plant construction, and tailings management." },

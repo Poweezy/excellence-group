@@ -13,12 +13,6 @@ export default function AgriculturePage() {
       title="Agriculture Division"
       subtitle="Feeding Africa Through Modern Farming"
       description="Our Agriculture Division combines cutting-edge agri-technology with deep African farming knowledge to improve food security and create sustainable, profitable agricultural enterprises across the continent."
-      stats={[
-        { value: "25,000ha", label: "Land Under Production" },
-        { value: "15+", label: "Crop Varieties" },
-        { value: "R 400M+", label: "Annual Revenue" },
-        { value: "8", label: "Processing Facilities" },
-      ]}
       services={[
         { title: "Crop Production", desc: "Large-scale commercial farming of grains, vegetables, and specialty crops." },
         { title: "Agri-Processing", desc: "On-site milling, packing, and value-added processing facilities." },
