@@ -11,15 +11,15 @@ export default function AgriculturePage() {
       badge="Agriculture Division"
       icon={Sprout}
       title="Agriculture Division"
-      subtitle="Feeding Africa Through Modern Farming"
-      description="Our Agriculture Division combines cutting-edge agri-technology with deep African farming knowledge to improve food security and create sustainable, profitable agricultural enterprises across the continent."
+      subtitle="Enhancing Food Security"
+      description="Our agriculture arm focuses on enhancing food security and commercial farming productivity through:\n\nWe promote sustainable agriculture practices and partner with emerging and commercial farmers to improve yields and profitability."
       services={[
-        { title: "Crop Production", desc: "Large-scale commercial farming of grains, vegetables, and specialty crops." },
-        { title: "Agri-Processing", desc: "On-site milling, packing, and value-added processing facilities." },
-        { title: "Livestock Management", desc: "Commercial cattle, poultry, and small-stock farming operations." },
-        { title: "Irrigation Systems", desc: "Design and installation of modern drip and pivot irrigation infrastructure." },
-        { title: "Agri-Finance", desc: "Financing solutions for smallholder and commercial farmer development." },
-        { title: "Market Access", desc: "Connecting farmers to retail, export, and processing market channels." },
+        { title: "Crop Production", desc: "High-yield cultivation of grains, vegetables, fruits, and cash crops." },
+        { title: "Livestock Farming", desc: "Sustainable rearing of cattle, poultry, goats, and dairy production." },
+        { title: "Agribusiness Development", desc: "Farm-to-market value chains and business incubation support." },
+        { title: "Agri-processing Initiatives", desc: "Value-added processing, milling, and packaging facilities." },
+        { title: "Modern Farming Technologies", desc: "Precision agriculture, IoT, drones, and automated irrigation." },
+        { title: "Animal Feed & Veterinary Medication", desc: "The Group manufactures and distributes high-quality: Nutrient-balanced animal feed. Veterinary medications and supplements. Livestock performance enhancers." },
       ]}
     />
   );

@@ -8,12 +8,10 @@ const footerLinks = {
     { name: "Leadership Team", href: "/about#leadership" },
     { name: "Careers", href: "/careers" },
     { name: "Investors", href: "/investors" },
-    { name: "Tenders", href: "/tenders" },
   ],
   Divisions: [
     { name: "Financial Advisory", href: "/financial" },
     { name: "Logistics Division", href: "/logistics" },
-    { name: "Sustainability", href: "/sustainability" },
     { name: "Water Bottling", href: "/water" },
     { name: "Insurance Division", href: "/insurance" },
   ],

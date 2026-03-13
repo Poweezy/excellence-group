@@ -11,15 +11,14 @@ export default function LogisticsPage() {
       badge="Logistics Division"
       icon={Truck}
       title="Logistics Division"
-      subtitle="Moving Africa Forward, Every Day"
-      description="Our Logistics Division offers comprehensive end-to-end supply chain solutions, from freight management to last-mile delivery — ensuring goods move efficiently across Africa and beyond."
+      subtitle="Specialized Logistics Solutions"
+      description="Excellence Group provides specialized logistics solutions, including:"
       services={[
-        { title: "Road Freight", desc: "Primary and secondary distribution across Southern Africa's road network." },
-        { title: "Warehousing & Storage", desc: "Secure, climate-controlled warehousing facilities at strategic hubs." },
-        { title: "Supply Chain Consulting", desc: "Expert analysis and redesign of your end-to-end supply chain." },
-        { title: "Cold Chain Logistics", desc: "Temperature-controlled solutions for perishable goods and pharmaceuticals." },
-        { title: "Cross-border Clearing", desc: "Seamless customs clearance and documentation across African borders." },
-        { title: "Last-Mile Delivery", desc: "Urban and rural last-mile distribution solutions for e-commerce and retail." },
+        { title: "Agriculture produce transportation", desc: "" },
+        { title: "Animal feed, veterinary supply, and distribution", desc: "" },
+        { title: "Bulk goods and haulage", desc: "" },
+        { title: "Fleet management services", desc: "" },
+        { title: "Safe and reliable transportation for school children, providing a round trip from Mbabane to Manzini", desc: "" },
       ]}
     />
   );
