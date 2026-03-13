@@ -16,6 +16,7 @@ interface DivisionLayoutProps {
   description: string;
   services: Service[];
   color?: string;
+  heroImage?: string;
 }
 
 export default function DivisionLayout({
@@ -25,20 +26,32 @@ export default function DivisionLayout({
   icon: Icon,
   description,
   services,
+  heroImage,
 }: DivisionLayoutProps) {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
       <section className="py-24 animated-bg relative min-h-[60vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Hero Image (optional) */}
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt=""
+              fill
+              className="object-cover opacity-20 brightness-75 z-5 absolute inset-0"
+              priority
+            />
+          )}
           {/* Marble Background */}
           <Image
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-30 brightness-[0.7] z-0 absolute inset-0"
+            className="object-cover opacity-30 brightness-[0.7] z-4 absolute inset-0"
             priority
           />
+
           {/* Gradient Overlay */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
           {/* Slant Panels */}
@@ -69,8 +82,8 @@ export default function DivisionLayout({
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-dark-border text-slate-300 hover:border-primary/40 hover:text-primary transition-all"
+                href="/#divisions"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-dark-border text-slate-300 hover:border-primary/40 hover:text-primary transition-all hover:no-underline scroll-mt-24"
               >
                 All Divisions
               </Link>

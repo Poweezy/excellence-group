@@ -13,6 +13,7 @@ export default function LogisticsPage() {
       title="Logistics Division"
       subtitle="Specialized Logistics Solutions"
       description="Excellence Group provides specialized logistics solutions, including:"
+      heroImage="/assets/hero-logistics.jpg" // Download truck convoy image
 services={[
         { title: "Agriculture produce transportation", desc: "Refrigerated and climate-controlled transport for fresh fruits, vegetables, and perishables to markets nationwide." },
         { title: "Animal feed, veterinary supply, and distribution", desc: "Specialized dry and temperature-controlled logistics for feed, vaccines, medicines, and equipment delivery." },

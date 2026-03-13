@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
@@ -11,18 +12,32 @@ export default function ContactPage() {
   const [error, setError] = useState('');
 
   return (
-    <div className="overflow-hidden">
-      {/* Hero */}
-      <section className="py-24 animated-bg relative">
+    <div className="overflow-hidden bg-dark-bg">
+      {/* Hero with Marble */}
+      <section className="py-24 animated-bg relative min-h-[70vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="max-w-2xl">
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">Contact</span>
-            <h1 className="mt-3 luxury-text-display text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Get in <span className="gold-shimmer">Touch</span>
+          {/* Marble */}
+          <Image
+            src="/assets/marble-gold-bg.png"
+            alt="Marble Texture"
+            fill
+            className="object-cover opacity-30 brightness-[0.7] z-0 absolute inset-0"
+            priority
+          />
+          {/* Gradient */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
+          {/* Slant Panels */}
+          <div className="absolute inset-0 z-20 pointer-events-none opacity-40">
+            <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />
+            <div className="absolute -right-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[15deg] border-l border-primary/10 backdrop-blur-sm" />
+          </div>
+          <AnimatedSection className="max-w-3xl relative z-30">
+            <span className="text-primary text-sm font-medium uppercase tracking-widest">Contact Excellence Group</span>
+            <h1 className="mt-3 luxury-text-display text-5xl lg:text-7xl font-bold text-white leading-tight">
+              Get in <span className="gold-shimmer italic">Touch</span>
             </h1>
-            <p className="mt-6 text-slate-400 text-xl leading-relaxed luxury-text-sans font-light">
-              Whether it&apos;s a business inquiry, partnership opportunity, or general query —
-              our team is ready to assist you from our Manzini headquarters.
+            <p className="mt-6 text-slate-400 text-xl font-light leading-relaxed luxury-text-sans">
+              From our Manzini headquarters, our team is ready to discuss partnerships, investment opportunities, or general inquiries.
             </p>
           </AnimatedSection>
         </div>
@@ -30,55 +45,55 @@ export default function ContactPage() {
 
       <div className="section-divider" />
 
-      <section className="py-24 bg-dark">
+      {/* Contact Info & Form */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact info: Three Column Layout */}
-            <AnimatedSection direction="left" className="lg:col-span-5 grid md:grid-cols-3 gap-8 mb-16">
+            {/* Contact Info */}
+            <AnimatedSection className="lg:col-span-2 space-y-8">
+              <h2 className="luxury-text-display text-4xl font-bold text-white mb-8">Headquarters</h2>
               {[
                 { 
                   icon: MapPin, 
-                  label: "Physical Address", 
-                  value: "Suite No. 1, First Floor, Eswatini Dairy Board Building, Manzini",
+                  title: "Physical Address", 
+                  desc: "Suite No. 1, First Floor, Eswatini Dairy Board Building, Manzini, Eswatini" 
                 },
                 { 
                   icon: Phone, 
-                  label: "Phone & Email", 
-                  value: "+268 3502 3746",
-                  subValue: "info@excellencegroup.co.sz"
+                  title: "Phone", 
+                  desc: "+268 3502 3746" 
                 },
                 { 
-                  icon: CheckCircle, 
-                  label: "Operating Status", 
-                  value: "Official Business Headquarters",
-                  subValue: "Monday – Friday: 08:00 – 17:00"
+                  icon: Mail, 
+                  title: "Email", 
+                  desc: "info@excellencegroup.co.sz" 
                 },
-              ].map(({ icon: Icon, label, value, subValue }) => (
-                <div key={label} className="p-8 rounded-2xl gold-border bg-dark-card group hover:bg-dark-elevated transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6 text-primary" />
+              ].map(({ icon: Icon, title, desc }, i) => (
+                <AnimatedSection key={title} delay={i * 0.1}>
+                  <div className="group p-8 rounded-2xl gold-border bg-dark-card backdrop-blur-sm hover:shadow-gold-lg hover:bg-dark-elevated transition-all">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
+                      <Icon className="w-6 h-6 text-primary" strokeWidth={1} />
+                    </div>
+                    <h3 className="luxury-text-accent text-lg font-bold text-white mb-3">{title}</h3>
+                    <p className="text-slate-400 font-light luxury-text-sans">{desc}</p>
                   </div>
-                  <div className="text-slate-500 text-[10px] uppercase tracking-widest mb-2 font-medium">{label}</div>
-                  <div className="text-white text-sm font-semibold mb-1 leading-relaxed">{value}</div>
-                  {subValue && <div className="text-slate-400 text-xs">{subValue}</div>}
-                </div>
+                </AnimatedSection>
               ))}
             </AnimatedSection>
 
-            {/* Form Column */}
-            <div className="lg:col-span-1" /> {/* Spacer */}
+            {/* Form */}
             <div className="lg:col-span-3">
-              <AnimatedSection direction="up" delay={0.1}>
+              <AnimatedSection direction="up" delay={0.2}>
                 {submitted ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="h-full flex flex-col items-center justify-center text-center py-20 gap-4 p-8 rounded-2xl gold-border bg-dark-card"
+                    className="p-12 rounded-2xl gold-border bg-dark-card backdrop-blur-sm text-center flex flex-col items-center gap-6"
                   >
-                    <CheckCircle className="w-16 h-16 text-primary" />
-                    <h3 className="luxury-text-display text-2xl text-white font-bold">Message Sent!</h3>
-                    <p className="text-slate-400 max-w-sm luxury-text-sans font-light">
-                      Thank you for reaching out to Excellence Group. Our team will respond within 24–48 business hours.
+                    <CheckCircle className="w-20 h-20 text-primary" />
+                    <h3 className="luxury-text-display text-3xl text-white font-bold">Thank You</h3>
+                    <p className="text-slate-400 max-w-md luxury-text-sans">
+                      Your message has been sent successfully. Our team will respond within 24-48 hours.
                     </p>
                   </motion.div>
                 ) : (
@@ -87,15 +102,9 @@ export default function ContactPage() {
                       e.preventDefault();
                       setLoading(true);
                       setError('');
-                      
+
                       const formData = new FormData(e.currentTarget);
-                      const data = {
-                        name: formData.get('name'),
-                        company: formData.get('company'),
-                        email: formData.get('email'),
-                        subject: formData.get('subject'),
-                        message: formData.get('message'),
-                      };
+                      const data = Object.fromEntries(formData);
 
                       try {
                         const response = await fetch('/api/contact', {
@@ -104,96 +113,100 @@ export default function ContactPage() {
                           body: JSON.stringify(data),
                         });
 
-                        if (!response.ok) {
-                          const error = await response.json();
-                          throw new Error(error.error || 'Failed to submit');
+                        if (response.ok) {
+                          setSubmitted(true);
+                        } else {
+                          const errorData = await response.json();
+                          setError(errorData.error || 'Submission failed');
                         }
-
-                        setSubmitted(true);
                       } catch (err) {
-                        setError(err instanceof Error ? err.message : 'An error occurred');
+                        setError('Network error. Please try again.');
                       } finally {
                         setLoading(false);
                       }
                     }}
-                    className="p-10 rounded-2xl gold-border bg-dark-card space-y-8"
+                    className="p-10 lg:p-12 rounded-2xl gold-border bg-dark-card backdrop-blur-sm space-y-6"
                   >
-                    <h3 className="luxury-text-display text-3xl text-white mb-2">Send an Official Inquiry</h3>
-                    {error && (
-                      <div className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-                        <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />
-                        <p className="text-red-400 text-sm">{error}</p>
-                      </div>
-                    )}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      {[
-                        { id: "name", label: "Full Name", placeholder: "John Smith" },
-                        { id: "company", label: "Company", placeholder: "Acme Corp" },
-                      ].map(({ id, label, placeholder }) => (
-                        <div key={id} className="relative group">
-                          <label htmlFor={id} className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">
-                            {label}
-                          </label>
-                          <input
-                            id={id}
-                            name={id}
-                            type="text"
-                            placeholder={placeholder}
-                            required
-                            disabled={loading}
-                            className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light disabled:opacity-50"
-                          />
-                        </div>
-                      ))}
-                    </div>
                     <div>
-                      <label htmlFor="email" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Corporate Email</label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="you@company.com"
+                      <h3 className="luxury-text-display text-3xl font-bold text-white mb-2">Official Inquiry</h3>
+                      <p className="text-slate-400 luxury-text-sans">Get in touch with our leadership team.</p>
+                    </div>
+
+                    {error && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl flex items-center gap-3 text-red-300"
+                      >
+                        <AlertCircle className="w-5 h-5 shrink-0" />
+                        {error}
+                      </motion.div>
+                    )}
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Full Name</label>
+                        <input
+                          name="name"
+                          type="text"
+                          required
+                          disabled={loading}
+                          className="w-full p-4 rounded-xl border border-dark-border bg-dark-card text-slate-200 placeholder-slate-600 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light"
+                          placeholder="John Smith"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Email</label>
+                        <input
+                          name="email"
+                          type="email"
+                          required
+                          disabled={loading}
+                          className="w-full p-4 rounded-xl border border-dark-border bg-dark-card text-slate-200 placeholder-slate-600 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light"
+                          placeholder="john@company.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Subject</label>
+                      <select
+                        name="subject"
                         required
                         disabled={loading}
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light disabled:opacity-50"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="subject" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Nature of Inquiry</label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        disabled={loading}
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light appearance-none disabled:opacity-50"
+                        className="w-full p-4 rounded-xl border border-dark-border bg-dark-card text-slate-200 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light appearance-none"
                       >
-                        <option value="">Select a topic</option>
+                        <option value="">Select an option</option>
                         <option>Business Partnership</option>
-                        <option>Investment Inquiry</option>
-                        <option>Procurement / Tenders</option>
-                        <option>Careers</option>
+                        <option>Investment Opportunity</option>
+                        <option>Procurement & Tenders</option>
+                        <option>Career Opportunities</option>
                         <option>General Inquiry</option>
                       </select>
                     </div>
+
                     <div>
-                      <label htmlFor="message" className="block text-slate-400 text-xs font-medium uppercase tracking-wider mb-2">Message</label>
+                      <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Message</label>
                       <textarea
-                        id="message"
                         name="message"
-                        rows={6}
+                        rows={5}
                         required
                         disabled={loading}
-                        placeholder="Provide details on your inquiry..."
-                        className="w-full bg-dark border border-dark-border rounded-xl px-4 py-4 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none font-light disabled:opacity-50"
+                        className="w-full p-4 rounded-xl border border-dark-border bg-dark-card text-slate-200 placeholder-slate-600 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-vertical font-light"
+                        placeholder="Describe your inquiry..."
                       />
                     </div>
-                    <button
+
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                       type="submit"
                       disabled={loading}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-5 rounded-xl bg-primary text-dark font-bold text-sm hover:bg-primary-light transition-all shadow-gold-sm hover:shadow-gold-md group uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full p-5 rounded-xl gold-metallic-solid text-dark font-bold uppercase tracking-widest text-sm shadow-gold-lg hover:shadow-gold-xl hover:brightness-105 transition-all flex items-center justify-center gap-3 group"
                     >
-                      {loading ? 'Submitting...' : 'Submit Official Inquiry'}
-                      <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </button>
+                      {loading ? 'Sending...' : 'Send Message'}
+                      <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </motion.button>
                   </form>
                 )}
               </AnimatedSection>
@@ -202,6 +215,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <div className="section-divider" />
     </div>
   );
 }
+

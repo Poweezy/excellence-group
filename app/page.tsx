@@ -146,6 +146,7 @@ export default function HomePage() {
           </AnimatedSection>
 
           <motion.div
+            id="divisions"
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
