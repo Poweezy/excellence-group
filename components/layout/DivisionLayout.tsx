@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Link from "next/link";
 import { ArrowRight, LucideIcon } from "lucide-react";
@@ -28,9 +29,24 @@ export default function DivisionLayout({
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="py-24 animated-bg relative">
+      <section className="py-24 animated-bg relative min-h-[60vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="max-w-3xl">
+          {/* Marble Background */}
+          <Image
+            src="/assets/marble-gold-bg.png"
+            alt="Marble Texture"
+            fill
+            className="object-cover opacity-30 brightness-[0.7] z-0 absolute inset-0"
+            priority
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
+          {/* Slant Panels */}
+          <div className="absolute inset-0 z-20 pointer-events-none opacity-40">
+            <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />
+            <div className="absolute -right-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[15deg] border-l border-primary/10 backdrop-blur-sm" />
+          </div>
+          <AnimatedSection className="max-w-3xl relative z-30">
             <span className="text-primary text-sm font-medium uppercase tracking-widest">{badge}</span>
             <div className="my-4">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
@@ -40,14 +56,17 @@ export default function DivisionLayout({
             <h1 className="luxury-text-display text-5xl lg:text-7xl font-bold text-white leading-tight">
               {title}
             </h1>
-            <p className="mt-4 text-2xl text-secondary font-light luxury-text-sans tracking-wide italic">{subtitle}</p>
+            <p className="mt-4 text-2xl text-secondary font-light luxury-text-sans tracking-wide italic gold-shimmer">{subtitle}</p>
             <p className="mt-8 text-slate-400 text-lg leading-relaxed max-w-2xl luxury-text-sans font-light">{description}</p>
             <div className="mt-8 flex gap-4 flex-wrap">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-dark font-bold hover:bg-primary-light transition-all shadow-gold-sm group"
+                className="group relative px-8 py-4 gold-metallic-solid min-w-[200px] inline-flex items-center gap-2"
               >
-                Partner With Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10 text-dark font-bold luxury-text-accent tracking-[0.2em]">
+                  Partner With Us
+                </span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/"
@@ -72,8 +91,8 @@ export default function DivisionLayout({
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.08}>
-                <div className="group p-6 rounded-2xl gold-border bg-dark-card hover:bg-dark-elevated transition-all h-full">
-                  <h3 className="luxury-text-display text-xl text-white mb-4 group-hover:text-secondary transition-colors">
+                <div className="group p-6 rounded-2xl gold-border bg-dark-card backdrop-blur-sm shadow-gold-sm hover:shadow-gold-lg hover:bg-dark-elevated transition-all h-full">
+                  <h3 className="luxury-text-display text-xl text-white mb-4 group-hover:text-primary gold-shimmer transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed luxury-text-sans font-light">{service.desc}</p>
@@ -83,6 +102,8 @@ export default function DivisionLayout({
           </div>
         </div>
       </section>
+
+      <div className="section-divider" />
 
       {/* CTA */}
       <section className="py-20 bg-dark-card">
@@ -96,7 +117,7 @@ export default function DivisionLayout({
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-dark font-bold hover:bg-primary-light transition-all shadow-gold-md hover:shadow-gold-lg group"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl gold-metallic-solid text-dark font-bold hover:brightness-110 transition-all shadow-gold-md hover:shadow-gold-lg group tracking-widest uppercase"
             >
               Get in Touch <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -106,3 +127,4 @@ export default function DivisionLayout({
     </div>
   );
 }
+
