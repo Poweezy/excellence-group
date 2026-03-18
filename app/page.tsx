@@ -161,14 +161,17 @@ export default function HomePage() {
                     href={div.href}
                     className="flex flex-col items-center justify-center p-8 h-full transition-all duration-700 hover:bg-white/[0.02]"
                   >
-                    <div className="mb-6 relative">
-                      <div className="absolute inset-0 blur-2xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-700 relative z-10" strokeWidth={1} />
+                    {/* Base Content (Fades out on hover) */}
+                    <div className="flex flex-col items-center justify-center transition-all duration-500 group-hover:opacity-0 group-hover:scale-95">
+                      <div className="mb-6 relative">
+                        <div className="absolute inset-0 blur-2xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                        <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-700 relative z-10" strokeWidth={1} />
+                      </div>
+                      <h3 className="luxury-text-accent text-white/80 group-hover:text-white transition-colors text-center">
+                        {div.name}
+                      </h3>
+                      <div className="mt-4 w-0 group-hover:w-8 h-[1px] bg-primary/40 transition-all duration-700" />
                     </div>
-                    <h3 className="luxury-text-accent text-white/80 group-hover:text-white transition-colors text-center">
-                      {div.name}
-                    </h3>
-                    <div className="mt-4 w-0 group-hover:w-8 h-[1px] bg-primary/40 transition-all duration-700" />
                     
                     {/* Hover Description overlay */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-dark/95 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
