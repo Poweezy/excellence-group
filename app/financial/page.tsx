@@ -9,6 +9,7 @@ export default function FinancialPage() {
   return (
     <DivisionLayout
       badge="Financial Advisory"
+      heroImage="/assets/financial-bg.png"
       icon={Landmark}
       title="Financial Advisory"
       subtitle="Capital Solutions for Africa's Ambitions"

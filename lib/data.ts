@@ -2,15 +2,15 @@ import { Landmark, Truck, Droplets, Construction, Sprout, Building2, ShieldCheck
 import type { Division, NavLink, Stat, Value } from './types';
 
 export const divisions: Division[] = [
-  { name: "Financial Advisory", icon: Landmark, href: "/financial", desc: "Expert wealth management and capital solutions" },
-  { name: "Logistics Division", icon: Truck, href: "/logistics", desc: "End-to-end supply chain excellence" },
+  { name: "Financial Advisory", icon: Landmark, href: "/financial", desc: "Expert wealth management and capital solutions", image: "/assets/financial-bg.png" },
+  { name: "Logistics Division", icon: Truck, href: "/logistics", desc: "End-to-end supply chain excellence", image: "/assets/logistics-bg.png" },
 
 
-  { name: "Water Bottling", icon: Droplets, href: "/water", desc: "Premium water bottling and distribution" },
-  { name: "Heavy Plant & Construction", icon: Construction, href: "/heavy-plant", desc: "Large-scale construction and infrastructure" },
-  { name: "Agriculture", icon: Sprout, href: "/agriculture", desc: "Modern farming and agri-processing" },
-  { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development" },
-  { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions" },
+  { name: "Water Bottling", icon: Droplets, href: "/water", desc: "Premium water bottling and distribution", image: "/assets/water-bg.png" },
+  { name: "Heavy Plant & Construction", icon: Construction, href: "/heavy-plant", desc: "Large-scale construction and infrastructure", image: "/assets/heavy-plant-bg.png" },
+  { name: "Agriculture", icon: Sprout, href: "/agriculture", desc: "Modern farming and agri-processing", image: "/assets/agriculture-bg.png" },
+  { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development", image: "/assets/marble-gold-bg.png" },
+  { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions", image: "/assets/marble-gold-bg.png" },
 ];
 
 export const navLinks: NavLink[] = [

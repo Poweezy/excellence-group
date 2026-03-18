@@ -8,10 +8,11 @@ export const metadata: Metadata = { title: "Water Bottling Division" };
 export default function WaterPage() {
   return (
     <DivisionLayout
-      badge="Water Bottling Division"
+      badge="Water Bottling"
+      heroImage="/assets/water-bg.png"
       icon={Droplets}
-      title="Water Bottling Division"
-      subtitle="Pure. Sustainable. Refreshing."
+      title="Water Bottling"
+      subtitle="Purity in Every Drop. Sustainable. Refreshing."
       description="Our Water Bottling Division sources, purifies, and distributes premium-quality drinking water, meeting the growing demand for clean, safe water across Africa with world-class bottling facilities."
       services={[
         { title: "Premium Water Brands", desc: "Still, sparkling, and flavoured water products for retail and hospitality." },

@@ -33,24 +33,16 @@ export default function DivisionLayout({
       {/* Hero */}
       <section className="py-24 animated-bg relative min-h-[60vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  {/* Hero Image (optional) */}
+          {/* Hero Image (New specific image) */}
           {heroImage && (
             <Image
               src={heroImage}
               alt=""
               fill
-              className="object-cover opacity-20 brightness-75 z-5 absolute inset-0"
+              className="object-cover opacity-25 brightness-[0.7] z-0 absolute inset-0"
               priority
             />
           )}
-          {/* Marble Background */}
-          <Image
-            src="/assets/marble-gold-bg.png"
-            alt="Marble Texture"
-            fill
-            className="object-cover opacity-30 brightness-[0.7] z-4 absolute inset-0"
-            priority
-          />
 
           {/* Gradient Overlay */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />

@@ -9,6 +9,7 @@ export default function HeavyPlantPage() {
   return (
     <DivisionLayout
       badge="Heavy Plant & Construction"
+      heroImage="/assets/heavy-plant-bg.png"
       icon={Construction}
       title="Heavy Plant & Construction"
       subtitle="Building Africa's Infrastructure, Steel by Steel"

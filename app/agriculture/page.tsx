@@ -8,10 +8,11 @@ export const metadata: Metadata = { title: "Agriculture Division" };
 export default function AgriculturePage() {
   return (
     <DivisionLayout
-      badge="Agriculture Division"
+      badge="Agriculture"
+      heroImage="/assets/agriculture-bg.png"
       icon={Sprout}
-      title="Agriculture Division"
-      subtitle="Enhancing Food Security"
+      title="Agriculture & Agri-processing"
+      subtitle="Excellence in Agricultural Systems"
       description="Our agriculture arm focuses on enhancing food security and commercial farming productivity through:\n\nWe promote sustainable agriculture practices and partner with emerging and commercial farmers to improve yields and profitability."
       services={[
         { title: "Crop Production", desc: "High-yield cultivation of grains, vegetables, fruits, and cash crops." },

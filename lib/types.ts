@@ -5,6 +5,7 @@ export interface Division {
   icon: LucideIcon;
   href: string;
   desc: string;
+  image?: string;
 }
 
 export interface NavLink {

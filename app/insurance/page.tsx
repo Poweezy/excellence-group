@@ -9,9 +9,10 @@ export default function InsurancePage() {
   return (
     <DivisionLayout
       badge="Insurance Division"
+      heroImage="/assets/marble-gold-bg.png"
       icon={ShieldCheck}
       title="Insurance Division"
-      subtitle="How We Deliver Value"
+      subtitle="Comprehensive Protection"
       description="The Group offers comprehensive risk protection and insurance solutions tailored to individuals, SMEs, and corporates, including:\n\nWe prioritize client-centric service, financial security, and responsive claims management."
       services={[
         { title: "Life and Health Insurance", desc: "Coverage for life assurance, personal health, disability, and medical expenses." },

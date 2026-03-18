@@ -158,10 +158,22 @@ export default function HomePage() {
                 <motion.div key={div.href} variants={staggerItem} className="group border-[0.5px] border-white/5 aspect-square relative overflow-hidden">
                   <Link
                     href={div.href}
-                    className="flex flex-col items-center justify-center p-8 h-full transition-all duration-700 hover:bg-white/[0.02]"
+                    className="flex flex-col items-center justify-center p-8 h-full transition-all duration-700 hover:bg-white/[0.02] relative"
                   >
+                    {/* Faint Background Image */}
+                    {div.image && (
+                      <div className="absolute inset-0 z-0 overflow-hidden opacity-25 group-hover:opacity-45 transition-opacity duration-700">
+                        <Image
+                          src={div.image}
+                          alt=""
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    
                     {/* Base Content (Fades out on hover) */}
-                    <div className="flex flex-col items-center justify-center transition-all duration-500 group-hover:opacity-0 group-hover:scale-95">
+                    <div className="flex flex-col items-center justify-center transition-all duration-500 group-hover:opacity-0 group-hover:scale-95 relative z-10">
                       <div className="mb-6 relative">
                         <div className="absolute inset-0 blur-2xl bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                         <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-700 relative z-10" strokeWidth={1} />
