@@ -135,7 +135,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── DIVISIONS (World Class Catalog Style) ───── */}
-      <section className="py-32 bg-dark relative border-t border-white/5">
+      <section id="divisions" className="py-32 bg-dark relative border-t border-white/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-24">
             <span className="luxury-text-accent text-primary tracking-[0.4em] mb-4 block">Institutional Portfolio</span>
@@ -146,7 +146,6 @@ export default function HomePage() {
           </AnimatedSection>
 
           <motion.div
-            id="divisions"
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
