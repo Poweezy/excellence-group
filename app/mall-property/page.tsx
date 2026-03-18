@@ -9,7 +9,7 @@ export default function MallPage() {
   return (
     <DivisionLayout
       badge="Mall & Property"
-      heroImage="/assets/marble-gold-bg.png"
+      heroImage="/assets/mall-property-bg.jpg"
       icon={Building2}
       title="Mall & Property Development"
       subtitle="Creating Spaces Where Communities Thrive"

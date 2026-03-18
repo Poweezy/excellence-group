@@ -9,7 +9,7 @@ export default function InsurancePage() {
   return (
     <DivisionLayout
       badge="Insurance Division"
-      heroImage="/assets/marble-gold-bg.png"
+      heroImage="/assets/insurance-bg.jpg"
       icon={ShieldCheck}
       title="Insurance Division"
       subtitle="Comprehensive Protection"

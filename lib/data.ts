@@ -9,8 +9,8 @@ export const divisions: Division[] = [
   { name: "Water Bottling", icon: Droplets, href: "/water", desc: "Premium water bottling and distribution", image: "/assets/water-bg.png" },
   { name: "Heavy Plant & Construction", icon: Construction, href: "/heavy-plant", desc: "Large-scale construction and infrastructure", image: "/assets/heavy-plant-bg.png" },
   { name: "Agriculture", icon: Sprout, href: "/agriculture", desc: "Modern farming and agri-processing", image: "/assets/agriculture-bg.png" },
-  { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development", image: "/assets/marble-gold-bg.png" },
-  { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions", image: "/assets/marble-gold-bg.png" },
+  { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development", image: "/assets/mall-property-bg.jpg" },
+  { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions", image: "/assets/insurance-bg.jpg" },
 ];
 
 export const navLinks: NavLink[] = [

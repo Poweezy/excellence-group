@@ -28,21 +28,37 @@ export default function DivisionLayout({
   services,
   heroImage,
 }: DivisionLayoutProps) {
+  // Helper to determine background animation based on title
+  const getBackgroundAnimation = () => {
+    const t = title.toLowerCase();
+    if (t.includes("water")) return "animate-ripple";
+    if (t.includes("logistics")) return "translate-x-[-2%] animate-pulse duration-[10s]"; // Simple movement feel
+    if (t.includes("financial") || t.includes("insurance")) return "shimmer-luxury-overlay";
+    if (t.includes("agriculture")) return "scale-105 animate-pulse duration-[15s]";
+    if (t.includes("heavy plant")) return "brightness-[0.8] contrast-[1.1]";
+    return "";
+  };
+
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="py-24 animated-bg relative min-h-[60vh]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Image (New specific image) */}
-          {heroImage && (
-            <Image
-              src={heroImage}
-              alt=""
-              fill
-              className="object-cover opacity-25 brightness-[0.7] z-0 absolute inset-0"
-              priority
-            />
-          )}
+      <section className="py-24 animated-bg relative min-h-[60vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* Background Elements */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            {/* Hero Image (New specific image) */}
+            {heroImage && (
+              <div className={`absolute inset-0 z-0 ${getBackgroundAnimation()}`}>
+                <Image
+                  src={heroImage}
+                  alt=""
+                  fill
+                  className="object-cover opacity-25 brightness-[0.7]"
+                  priority
+                />
+              </div>
+            )}
+          </div>
 
           {/* Gradient Overlay */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />

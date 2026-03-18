@@ -6,6 +6,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { ArrowRight, TrendingUp, Globe, ChevronDown } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { divisions, values } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -162,7 +163,13 @@ export default function HomePage() {
                   >
                     {/* Faint Background Image */}
                     {div.image && (
-                      <div className="absolute inset-0 z-0 overflow-hidden opacity-25 group-hover:opacity-45 transition-opacity duration-700">
+                      <div className={cn(
+                        "absolute inset-0 z-0 overflow-hidden opacity-25 group-hover:opacity-45 transition-opacity duration-700",
+                        div.name.toLowerCase().includes("water") && "animate-ripple",
+                        (div.name.toLowerCase().includes("financial") || div.name.toLowerCase().includes("insurance")) && "shimmer-luxury-overlay",
+                        div.name.toLowerCase().includes("logistics") && "translate-x-[-2%] animate-pulse duration-[10s]",
+                        div.name.toLowerCase().includes("agriculture") && "scale-105 animate-pulse duration-[15s]"
+                      )}>
                         <Image
                           src={div.image}
                           alt=""
