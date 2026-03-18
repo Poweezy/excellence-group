@@ -32,8 +32,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { name, company, email, subject, message } = body;
+    const formData = await request.formData();
+    const name = formData.get('name') as string;
+    const company = formData.get('company') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+    const attachment = formData.get('attachment') as File | null;
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -56,6 +61,8 @@ export async function POST(request: NextRequest) {
       email: sanitizeInput(email),
       subject: subject ? sanitizeInput(subject) : 'General Inquiry',
       message: sanitizeInput(message),
+      hasAttachment: attachment ? true : false,
+      attachmentName: attachment ? attachment.name : null,
     };
 
     console.log('Contact form submission:', sanitizedData);

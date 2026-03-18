@@ -114,44 +114,23 @@ export default function CareersPage() {
             </p>
           </AnimatedSection>
 
-          <div className="max-w-4xl mx-auto space-y-4">
-            {[
-              { title: "Senior Logistics Coordinator", dept: "Logistics", type: "Full-Time", loc: "Manzini" },
-              { title: "Agricultural Data Analyst", dept: "Agriculture", type: "On-site", loc: "Manzini" },
-              { title: "Financial Risk Manager", dept: "Financial Advisory", type: "Hybrid", loc: "Manzini" },
-              { title: "Heavy Plant Engineer", dept: "Heavy Plant", type: "Full-Time", loc: "Site-based" },
-              { title: "Property Development Manager", dept: "Mall & Property", type: "Full-Time", loc: "Mbabane" }
-            ].map((job, i) => (
-              <AnimatedSection key={job.title} delay={i * 0.1}>
-                <div 
-                  className="p-8 rounded-2xl gold-border bg-dark hover:bg-dark-elevated hover:shadow-gold-lg transition-all group cursor-pointer flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-6 relative hover:translate-y-[-2px]"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <div className="lg:flex lg:items-center lg:gap-6 mb-6 lg:mb-0">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 mb-4 lg:mb-0">
-                      <Briefcase className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="luxury-text-accent text-xl font-bold text-white mb-2 group-hover:gold-shimmer transition-colors">{job.title}</h3>
-                      <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                        <span className="px-3 py-1 rounded-full bg-white/5">{job.dept}</span>
-                        <span className="px-3 py-1 rounded-full bg-secondary/10 text-secondary">{job.type}</span>
-                        <span className="px-3 py-1 rounded-full bg-primary/10 text-primary">{job.loc}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 ml-auto group-hover:translate-x-2 transition-transform duration-300">
-                    <span className="text-sm font-medium luxury-text-sans text-slate-400 group-hover:text-white">Apply Now</span>
-                    <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-white" />
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection delay={0.1}>
+              <div className="p-12 text-center rounded-3xl border border-white/5 bg-dark-bg/40 backdrop-blur-sm shadow-gold-sm hover:shadow-gold-md hover:border-primary/20 transition-all duration-500">
+                <div className="w-20 h-20 mx-auto rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center mb-6">
+                  <Briefcase className="w-10 h-10 text-primary/60" />
                 </div>
-              </AnimatedSection>
-            ))}
+                <h3 className="luxury-text-display text-2xl lg:text-3xl font-bold text-white mb-4">No Current Vacancies</h3>
+                <p className="text-slate-400 text-lg luxury-text-sans max-w-lg mx-auto leading-relaxed font-light">
+                  Our teams are currently at full capacity across all divisions. However, Excellence Group is continuously evolving.
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-slate-500 text-lg mb-8 max-w-2xl mx-auto luxury-text-sans">
-              Don't see a fit? Join our talent pool for future opportunities.
+            <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto luxury-text-sans font-light">
+              We proactively seek visionary talent. Submit your CV to our talent pool to be notified of future opportunities.
             </p>
             <Link
               href="/contact"

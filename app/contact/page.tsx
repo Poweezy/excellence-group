@@ -10,6 +10,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [subject, setSubject] = useState('');
 
   return (
     <div className="overflow-hidden bg-dark-bg">
@@ -104,13 +105,11 @@ export default function ContactPage() {
                       setError('');
 
                       const formData = new FormData(e.currentTarget);
-                      const data = Object.fromEntries(formData);
 
                       try {
                         const response = await fetch('/api/contact', {
                           method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify(data),
+                          body: formData,
                         });
 
                         if (response.ok) {
@@ -174,6 +173,8 @@ export default function ContactPage() {
                         name="subject"
                         required
                         disabled={loading}
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                         className="w-full p-4 rounded-xl border border-dark-border bg-dark-card text-slate-200 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all font-light appearance-none"
                       >
                         <option value="">Select an option</option>
@@ -184,6 +185,24 @@ export default function ContactPage() {
                         <option>General Inquiry</option>
                       </select>
                     </div>
+
+                    {subject === "Career Opportunities" && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        className="overflow-hidden"
+                      >
+                        <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Upload CV / Cover Letter (PDF, DOCX)</label>
+                        <input
+                          name="attachment"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          disabled={loading}
+                          required
+                          className="w-full p-3 rounded-xl border border-dark-border bg-dark-card text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 transition-all font-light"
+                        />
+                      </motion.div>
+                    )}
 
                     <div>
                       <label className="block text-slate-400 text-xs uppercase tracking-wider mb-2 font-medium">Message</label>
