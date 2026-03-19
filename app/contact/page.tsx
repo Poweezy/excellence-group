@@ -57,27 +57,35 @@ export default function ContactPage() {
                 { 
                   icon: MapPin, 
                   title: "Physical Address", 
-                  desc: "Suite No. 1, First Floor, Eswatini Dairy Board Building, Manzini, Eswatini" 
+                  desc: "Suite No. 1, First Floor, Eswatini Dairy Board Building, Manzini, Eswatini",
+                  link: "https://www.google.com/maps/search/?api=1&query=Suite+No.+1%2C+First+Floor%2C+Eswatini+Dairy+Board+Building%2C+Manzini%2C+Eswatini"
                 },
                 { 
                   icon: Phone, 
                   title: "Phone", 
-                  desc: "+268 3502 3746" 
+                  desc: "+268 3502 3746",
+                  link: "tel:+26835023746"
                 },
                 { 
                   icon: Mail, 
                   title: "Email", 
-                  desc: "info@excellencegroup.co.sz" 
+                  desc: "info@excellencegroup.co.sz",
+                  link: "mailto:info@excellencegroup.co.sz"
                 },
-              ].map(({ icon: Icon, title, desc }, i) => (
+              ].map(({ icon: Icon, title, desc, link }, i) => (
                 <AnimatedSection key={title} delay={i * 0.1}>
-                  <div className="group p-8 rounded-2xl gold-border bg-dark-card backdrop-blur-sm hover:shadow-gold-lg hover:bg-dark-elevated transition-all">
+                  <a 
+                    href={link}
+                    target={link.startsWith('http') ? "_blank" : undefined}
+                    rel={link.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className="group block p-8 rounded-2xl gold-border bg-dark-card backdrop-blur-sm hover:shadow-gold-lg hover:bg-dark-elevated transition-all cursor-pointer"
+                  >
                     <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
                       <Icon className="w-6 h-6 text-primary" strokeWidth={1} />
                     </div>
                     <h3 className="luxury-text-accent text-lg font-bold text-white mb-3">{title}</h3>
                     <p className="text-slate-400 font-light luxury-text-sans">{desc}</p>
-                  </div>
+                  </a>
                 </AnimatedSection>
               ))}
             </AnimatedSection>
