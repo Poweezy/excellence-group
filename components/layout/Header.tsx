@@ -27,8 +27,8 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-700 h-20 flex items-center",
         isScrolled
-          ? "bg-dark/80 backdrop-blur-xl border-b border-white/5 shadow-2xl"
-          : "bg-transparent"
+          ? "bg-dark/60 backdrop-blur-2xl border-b border-white/10 shadow-2xl"
+          : "bg-white/5 backdrop-blur-lg border-b border-white/5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -74,7 +74,7 @@ export default function Header() {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         onMouseEnter={() => setDivisionsOpen(true)}
                         onMouseLeave={() => setDivisionsOpen(false)}
-                        className="absolute top-full left-0 w-64 bg-dark/95 backdrop-blur-2xl border border-white/10 p-4 shadow-2xl"
+                        className="absolute top-full left-0 w-64 bg-dark/80 backdrop-blur-3xl border border-white/10 p-4 shadow-2xl"
                       >
                         <div className="grid gap-2">
                           {link.dropdown.map((div) => (
@@ -131,7 +131,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 top-20 bg-dark z-40 lg:hidden flex flex-col p-8"
+            className="fixed inset-0 top-20 bg-dark/90 backdrop-blur-3xl z-40 lg:hidden flex flex-col p-8 border-t border-white/5 shadow-2xl"
           >
             <div className="flex flex-col gap-8">
               {navLinks.map((link) => (
