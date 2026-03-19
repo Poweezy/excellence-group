@@ -48,12 +48,12 @@ export default function DivisionLayout({
           <div className="absolute inset-0 z-0 overflow-hidden">
             {/* Hero Image (New specific image) */}
             {heroImage && (
-              <div className={`absolute inset-0 z-0 ${getBackgroundAnimation()}`}>
+              <div className="absolute inset-0 z-0">
                 <Image
                   src={heroImage}
                   alt=""
                   fill
-                  className="object-cover opacity-25 brightness-[0.7]"
+                  className="object-cover opacity-50"
                   priority
                 />
               </div>
@@ -61,7 +61,7 @@ export default function DivisionLayout({
           </div>
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />
           {/* Slant Panels */}
           <div className="absolute inset-0 z-20 pointer-events-none opacity-40">
             <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />

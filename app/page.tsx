@@ -44,10 +44,10 @@ export default function HomePage() {
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-30 brightness-[0.7]"
+            className="object-cover opacity-55"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />
         </div>
         
         {/* Architectural Framing */}
@@ -163,13 +163,7 @@ export default function HomePage() {
                   >
                     {/* Faint Background Image */}
                     {div.image && (
-                      <div className={cn(
-                        "absolute inset-0 z-0 overflow-hidden opacity-25 group-hover:opacity-45 transition-opacity duration-700",
-                        div.name.toLowerCase().includes("water") && "animate-ripple",
-                        (div.name.toLowerCase().includes("financial") || div.name.toLowerCase().includes("insurance")) && "shimmer-luxury-overlay",
-                        div.name.toLowerCase().includes("logistics") && "translate-x-[-2%] animate-pulse duration-[10s]",
-                        div.name.toLowerCase().includes("agriculture") && "scale-105 animate-pulse duration-[15s]"
-                      )}>
+                      <div className="absolute inset-0 z-0 overflow-hidden opacity-55 group-hover:opacity-75 transition-opacity duration-700">
                         <Image
                           src={div.image}
                           alt=""

@@ -22,11 +22,11 @@ export default function ContactPage() {
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-30 brightness-[0.7] z-0 absolute inset-0"
+            className="object-cover opacity-55 z-0 absolute inset-0"
             priority
           />
           {/* Gradient */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />
           {/* Slant Panels */}
           <div className="absolute inset-0 z-20 pointer-events-none opacity-40">
             <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />
