@@ -236,6 +236,29 @@ export default function ContactPage() {
       </section>
 
       <div className="section-divider" />
+
+      {/* Map Section */}
+      <section className="py-24 bg-dark-bg/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="rounded-3xl overflow-hidden gold-border h-[500px] relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.816579958533!2d31.38074158194708!3d-26.4938499591691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eef4fd52d2da311%3A0x9d9725df1253d48b!2sEswatini%20Dairy%20Board!5e0!3m2!1sen!2s!4v1773915473833!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Excellence Group Location"
+              className="absolute inset-0"
+            />
+            {/* Overlay to coordinate with premium theme */}
+            <div className="absolute inset-0 pointer-events-none border-[20px] border-dark-bg/20" />
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
     </div>
   );
 }
