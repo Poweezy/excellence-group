@@ -62,15 +62,15 @@ export default function CareersPage() {
       {/* Why Join Us */}
       <section className="py-24 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <AnimatedSection direction="left">
+          <div className="max-w-4xl mx-auto text-center">
+            <AnimatedSection direction="up">
               <h2 className="luxury-text-display text-4xl lg:text-6xl font-bold text-white mb-8">Cultivating <span className="italic gold-shimmer">Brilliance.</span></h2>
-              <p className="text-slate-400 text-lg font-light luxury-text-sans leading-relaxed mb-10">
+              <p className="text-slate-400 text-lg font-light luxury-text-sans leading-relaxed mb-10 mx-auto max-w-2xl">
                 At Excellence Group, your growth is our mission. We provide a platform for 
                 innovators, specialists, and leaders to drive meaningful transformation across 
                 our diversified portfolio.
               </p>
-              <div className="grid sm:grid-cols-2 gap-8">
+              <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto text-left">
                 {[
                   { icon: Zap, title: "Accelerated Growth", desc: "Global-standard training and mentorship programs with career progression paths." },
                   { icon: Star, title: "Inclusive Culture", desc: "Unified community built on mutual respect, diversity, and shared values." }
@@ -87,15 +87,6 @@ export default function CareersPage() {
                     <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
-              </div>
-            </AnimatedSection>
-            <AnimatedSection direction="right" className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden gold-border bg-dark-card backdrop-blur-sm flex items-center justify-center p-12 text-center relative hover:scale-102 transition-transform hover:rotate-1">
-                <div>
-                  <Users className="w-20 h-20 text-primary mx-auto mb-8" />
-                  <h3 className="luxury-text-display text-3xl font-bold text-white mb-4 gold-shimmer">5,000+</h3>
-                  <p className="text-slate-400 text-lg font-light uppercase tracking-widest">Team Members Across Southern Africa</p>
-                </div>
               </div>
             </AnimatedSection>
           </div>
