@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   Company: [
@@ -61,17 +61,6 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-primary shrink-0" />
                 <span>Manzini, Eswatini</span>
               </div>
-            </div>
-            <div className="flex gap-3 mt-8">
-              {[Linkedin, Twitter, Facebook].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg border border-dark-border flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/40 hover:bg-dark-elevated transition-all duration-200"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
             </div>
           </div>
 

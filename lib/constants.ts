@@ -14,11 +14,6 @@ export const CONTACT_INFO = {
   hours: 'Monday – Friday: 08:00 – 17:00',
 } as const;
 
-export const SOCIAL_LINKS = {
-  linkedin: '#',
-  twitter: '#',
-  facebook: '#',
-} as const;
 
 export const RATE_LIMIT = {
   maxRequests: 3,

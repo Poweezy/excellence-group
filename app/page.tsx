@@ -128,7 +128,7 @@ export default function HomePage() {
           <AnimatedSection>
             <div className="w-16 h-[1px] bg-primary/40 mx-auto mb-12" />
             <blockquote className="luxury-text-display text-3xl sm:text-5xl lg:text-6xl text-white italic font-light leading-snug">
-              "To be a leading diversified enterprise that anchors the future economy of Eswatini through integrity, innovation, and unwavering operational excellence."
+              "To become a leading diversified African enterprise recognized for operational excellence, sustainable growth, and measurable social impact."
             </blockquote>
             <div className="w-16 h-[1px] bg-primary/40 mx-auto mt-12" />
           </AnimatedSection>

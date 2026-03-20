@@ -64,9 +64,8 @@ export default function AboutPage() {
               </div>
               <h2 className="luxury-text-display text-4xl font-bold text-white mb-6 group-hover:gold-shimmer transition-all">Our Mission</h2>
               <p className="text-slate-400 leading-relaxed text-lg font-light luxury-text-sans">
-                To deliver exceptional, sustainable value to our stakeholders by leveraging our diversified
-                business portfolio, world-class talent, and deep pan-African expertise to drive meaningful
-                economic transformation.
+                To deliver innovative, reliable, and value-driven solutions across our industries while creating opportunities,
+                empowering communities, and maintaining the highest standard of integrity and performance.
               </p>
             </AnimatedSection>
 
@@ -76,8 +75,8 @@ export default function AboutPage() {
               </div>
               <h2 className="luxury-text-display text-4xl font-bold text-white mb-6 group-hover:gold-shimmer transition-all">Our Vision</h2>
               <p className="text-slate-400 leading-relaxed text-lg font-light luxury-text-sans">
-                To be a leading diversified enterprise that anchors the future economy of Eswatini through 
-                integrity, innovation, and unwavering operational excellence.
+                To become a leading diversified African enterprise recognized for operational excellence, 
+                sustainable growth, and measurable social impact.
               </p>
             </AnimatedSection>
           </div>
