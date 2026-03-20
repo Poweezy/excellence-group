@@ -58,7 +58,7 @@ export default function ContactPage() {
                   icon: MapPin, 
                   title: "Physical Address", 
                   desc: "Suite No. 1, First Floor, Eswatini Dairy Board Building, Manzini, Eswatini",
-                  link: "https://www.google.com/maps/search/?api=1&query=Suite+No.+1%2C+First+Floor%2C+Eswatini+Dairy+Board+Building%2C+Manzini%2C+Eswatini"
+                  link: "#map"
                 },
                 { 
                   icon: Phone, 
@@ -246,7 +246,7 @@ export default function ContactPage() {
       <div className="section-divider" />
 
       {/* Map Section */}
-      <section className="py-24 bg-dark-bg/50">
+      <section id="map" className="py-24 bg-dark-bg/50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="rounded-3xl overflow-hidden gold-border h-[500px] relative">
             <iframe
