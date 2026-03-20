@@ -22,7 +22,7 @@ export default function ContactPage() {
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-55 z-0 absolute inset-0"
+            className="object-cover opacity-65 z-0 absolute inset-0"
             priority
           />
           {/* Gradient */}

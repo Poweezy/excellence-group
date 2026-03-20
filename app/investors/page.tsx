@@ -20,7 +20,7 @@ export default function InvestorsPage() {
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-55"
+            className="object-cover opacity-65"
             priority
           />
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />

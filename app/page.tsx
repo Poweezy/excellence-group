@@ -44,7 +44,7 @@ export default function HomePage() {
             src="/assets/marble-gold-bg.png"
             alt="Marble Texture"
             fill
-            className="object-cover opacity-55"
+            className="object-cover opacity-65"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />
@@ -163,7 +163,7 @@ export default function HomePage() {
                   >
                     {/* Faint Background Image */}
                     {div.image && (
-                      <div className="absolute inset-0 z-0 overflow-hidden opacity-55 group-hover:opacity-75 transition-opacity duration-700">
+                      <div className="absolute inset-0 z-0 overflow-hidden opacity-65 group-hover:opacity-85 transition-opacity duration-700">
                         <Image
                           src={div.image}
                           alt=""
@@ -278,7 +278,7 @@ export default function HomePage() {
       <section className="py-48 bg-dark relative overflow-hidden text-center">
         {/* Abstract background elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        <div className="absolute inset-0 bg-marble-luxury bg-cover bg-bottom opacity-10" />
+        <div className="absolute inset-0 bg-marble-luxury bg-cover bg-bottom opacity-65" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <AnimatedSection>
