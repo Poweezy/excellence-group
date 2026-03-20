@@ -53,7 +53,7 @@ export default function DivisionLayout({
                   src={heroImage}
                   alt=""
                   fill
-                  className="object-cover opacity-65"
+                  className="object-cover opacity-55"
                   priority
                 />
               </div>
