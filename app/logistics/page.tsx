@@ -16,10 +16,10 @@ export default function LogisticsPage() {
       description="Excellence Group provides specialized logistics solutions, including:"
       services={[
         { title: "Agriculture produce transportation", desc: "Refrigerated and climate-controlled transport for fresh fruits, vegetables, and perishables to markets nationwide." },
-        { title: "Animal feed, veterinary supply, and distribution", desc: "Specialized dry and temperature-controlled logistics for feed, vaccines, medicines, and equipment delivery." },
-        { title: "Bulk goods and haulage", desc: "Heavy-duty tipper trucks and trailers for aggregates, liquids, and oversized cargo with rapid turnaround." },
+        { title: "Animal feed, veterinary supply, and distribution", desc: "Specialized dry and temperature-controlled logistics for feed and equipment delivery." },
+        { title: "Bulk goods and haulage", desc: "Heavy-duty tipper trucks and trailers for aggregates and oversized cargo with rapid turnaround." },
         { title: "Fleet management services", desc: "Comprehensive maintenance, tracking, GPS, driver training, and compliance for optimized fleet operations." },
-        { title: "Safe and reliable transportation for school children, providing a round trip from Mbabane to Manzini", desc: "Licensed school shuttles with safety protocols, trained drivers, daily inspections, and parent tracking app." },
+        { title: "Safe and reliable transportation for school children, providing a round trip from Mbabane to Manzini", desc: "Licensed school shuttles with safety protocols, trained drivers." },
       ]}
     />
   );

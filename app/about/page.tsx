@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { icon: ShieldCheck, title: "Integrity", desc: "Honesty and transparency guide every business decision and relationship we build." },
-  { icon: Zap, title: "Innovation", desc: "Pioneering new technologies and methodologies to lead global markets." },
-  { icon: Award, title: "Excellence", desc: "We set the highest standards in everything we do, from governance to client service." },
-  { icon: Leaf, title: "Sustainability", desc: "Long-term thinking shapes every strategy to protect tomorrow's opportunities." },
-  { icon: Heart, title: "Social Impact", desc: "Creating measurable value and upliftment for our local communities in Eswatini." },
+  { icon: Award, title: "Excellence", desc: "We pursue superior performance in all we do." },
+  { icon: ShieldCheck, title: "Integrity", desc: "Ethical business practices guide everyday decisions." },
+  { icon: Zap, title: "Innovation", desc: "We embrace modern solutions and strategic thinking." },
+  { icon: Leaf, title: "Sustainability", desc: "Long-term environmental and economic responsibility." },
+  { icon: Heart, title: "Impact", desc: "We create meaningful value for stakeholders and communities." },
 ];
 
 export default function AboutPage() {

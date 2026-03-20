@@ -1,4 +1,4 @@
-import { Landmark, Truck, Droplets, Construction, Sprout, Building2, ShieldCheck, Zap, Award, Heart } from "lucide-react";
+import { Landmark, Truck, Droplets, Construction, Sprout, Building2, ShieldCheck, Zap, Award, Heart, Leaf } from "lucide-react";
 import type { Division, NavLink, Stat, Value } from './types';
 
 export const divisions: Division[] = [
@@ -29,11 +29,9 @@ export const stats: Stat[] = [
 ];
 
 export const values: Value[] = [
-  { name: "Integrity", icon: ShieldCheck, desc: "Upholding the highest moral and ethical standards in every transaction." },
-  { name: "Innovation", icon: Zap, desc: "Pioneering new technologies and methodologies to lead global markets." },
-  { name: "Excellence", icon: Award, desc: "A relentless pursuit of perfection in all our diversified ventures." },
-
-
-  { name: "Social Impact", icon: Heart, desc: "Creating measurable value and upliftment for our local communities." },
+  { name: "Excellence", icon: Award, desc: "We pursue superior performance in all we do." },
+  { name: "Integrity", icon: ShieldCheck, desc: "Ethical business practices guide everyday decisions." },
+  { name: "Innovation", icon: Zap, desc: "We embrace modern solutions and strategic thinking." },
+  { name: "Sustainability", icon: Leaf, desc: "Long-term environmental and economic responsibility." },
+  { name: "Impact", icon: Heart, desc: "We create meaningful value for stakeholders and communities." },
 ];
-
