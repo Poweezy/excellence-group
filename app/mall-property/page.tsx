@@ -13,7 +13,7 @@ export default function MallPage() {
       icon={Building2}
       title="Mall & Property Development"
       subtitle="Creating Spaces Where Communities Thrive"
-      description="Our Mall & Property Development Division develops, owns, and manages premium retail, commercial, and mixed-use properties across Southern Africa — creating dynamic spaces that drive economic activity."
+      description="Our Mall & Property Development Division develops, owns, and manages premium retail, commercial, and mixed-use properties across Eswatini — creating dynamic spaces that drive economic activity."
       services={[
         { title: "Retail Space Leasing", desc: "Strategic retail space leasing solutions for shopping centers, malls, and standalone retail properties." },
         { title: "Commercial Property Management", desc: "Full-service property management including maintenance, operations, and facility management for commercial assets." },

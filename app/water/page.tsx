@@ -15,10 +15,9 @@ export default function WaterPage() {
       subtitle="Purity in Every Drop. Sustainable. Refreshing."
       description="Our Water Bottling Division sources, purifies, and distributes premium-quality drinking water, meeting the growing demand for clean, safe water across Africa with world-class bottling facilities."
       services={[
-        { title: "Premium Water Brands", desc: "Still, sparkling, and flavoured water products for retail and hospitality." },
+        { title: "Premium Water Brands", desc: "Still water products for retail and hospitality." },
         { title: "Private Label Bottling", desc: "Custom-branded bottling solutions for corporate, hotel, and event clients." },
         { title: "Bulk Water Supply", desc: "Industrial and municipal bulk water supply and distribution." },
-        { title: "Water Purification", desc: "State-of-the-art reverse osmosis and UV purification technologies." },
         { title: "Eco Packaging", desc: "Sustainable, recyclable, and biodegradable packaging options." },
         { title: "Distribution Network", desc: "Nationwide distribution to retail chains, restaurants, and hospitality groups." },
       ]}
