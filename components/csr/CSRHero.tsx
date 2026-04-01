@@ -12,12 +12,12 @@ export default function CSRHero() {
             <span className="gold-shimmer italic font-light">Lasting Value.</span>
           </h1>
           <p className="mt-8 text-slate-300 text-xl font-light leading-relaxed luxury-text-sans">
-            At Excellence Group, our commitment to social responsibility is rooted in deliberate action. 
-            We aim to transform our core business activities into meaningful initiatives that directly benefit communities. 
-            We believe that genuine corporate responsibility involves consistently using our strengths to address real societal needs 
-            with dignity and measurable impact. Our approach is characterized not by isolated actions but by a sustained 
-            commitment to making a difference. By aligning our corporate social responsibility (CSR) initiatives with our 
-            operational strengths, we ensure that our contributions are both practical and transformative, creating lasting value 
+            At Excellence Group, our commitment to social responsibility is rooted in deliberate action.
+            We aim to transform our core business activities into meaningful initiatives that directly benefit communities.
+            We believe that genuine corporate responsibility involves consistently using our strengths to address real societal needs
+            with dignity and measurable impact. Our approach is characterized not by isolated actions but by a sustained
+            commitment to making a difference. By aligning our corporate social responsibility (CSR) initiatives with our
+            operational strengths, we ensure that our contributions are both practical and transformative, creating lasting value
             for the communities we serve.
           </p>
         </AnimatedSection>
@@ -32,9 +32,9 @@ export default function CSRHero() {
           priority
         />
       </div>
-      
+
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-dark-bg/80 via-dark-bg/40 to-dark-bg" />
-      
+
       <div className="absolute inset-0 z-20 pointer-events-none opacity-[0.6]">
         <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/20 skew-x-[-15deg] border-r border-primary/20 backdrop-blur-md shadow-[50px_0_100px_rgba(0,0,0,0.5)]" />
         <div className="absolute -right-[25%] top-0 h-[150%] w-[50%] bg-dark-card/20 skew-x-[15deg] border-l border-primary/20 backdrop-blur-md shadow-[-50px_0_100px_rgba(0,0,0,0.5)]" />

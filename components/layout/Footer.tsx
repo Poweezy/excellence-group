@@ -21,9 +21,9 @@ const footerLinks = {
     { name: "Mall & Property", href: "/mall-property" },
   ],
   Legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Compliance", href: "#" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Compliance", href: "/compliance" },
   ],
 };
 
