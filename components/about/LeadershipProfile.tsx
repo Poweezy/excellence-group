@@ -7,7 +7,7 @@ export default function LeadershipProfile() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-20 lg:mb-24">
           <span className="text-primary text-sm font-medium uppercase tracking-[0.3em] inline-block mb-3 border border-primary/20 rounded-full px-5 py-2 backdrop-blur-sm bg-primary/5">
-            Leadership Steering
+            Leadership
           </span>
           <h2 className="mt-4 luxury-text-display text-5xl lg:text-7xl font-bold text-white text-center">
             The Visionary Behind <span className="italic font-light gold-shimmer">Excellence.</span>
@@ -18,7 +18,7 @@ export default function LeadershipProfile() {
         <div className="max-w-[1000px] mx-auto">
           <AnimatedSection delay={0.1} className="relative">
             <div className="luxury-text-sans font-light text-slate-300 text-[18px] leading-[1.8] text-left">
-              
+
               {/* Floating Image Card */}
               <div className="float-none md:float-left w-full sm:w-[80%] md:w-[45%] lg:w-[40%] mx-auto md:mx-0 mb-10 md:mb-8 md:mr-10 xl:mr-12">
                 <div className="relative overflow-hidden rounded-3xl gold-border bg-dark-card shadow-[0_20px_50px_-15px_rgba(201,160,80,0.15)] group">
@@ -48,7 +48,7 @@ export default function LeadershipProfile() {
                 <p>
                   A visionary architect of integrated business systems, he has built Excellence Group into a dynamic, multi-sector organisation rooted in sustainability, operational efficiency, and long-term value creation. His leadership reflects a rare combination of strategic foresight, disciplined execution, and entrepreneurial agility.
                 </p>
-                
+
                 <h4 className="text-[26px] luxury-text-display text-white gold-shimmer block w-fit pt-6 pb-2 border-b border-white/5">Education</h4>
                 <p>
                   Mr. Ginindza holds a Master of Arts (M.A.) in Economics from the University of Manchester. His academic grounding in economic theory and applied analysis informs his strategic decision-making, particularly in investment structuring, market expansion, and sustainable growth modelling.
@@ -87,7 +87,7 @@ export default function LeadershipProfile() {
                 <ul className="space-y-3 ml-2 list-none mt-4">
                   {["Excellence in Execution", "Sustainable Growth", "Integrity & Accountability", "Innovation with Purpose"].map((item, i) => (
                     <li key={i} className="flex items-center gap-4">
-                       <svg className="w-2.5 h-2.5 text-primary flex-shrink-0 opacity-80" viewBox="0 0 24 24" fill="currentColor">
+                      <svg className="w-2.5 h-2.5 text-primary flex-shrink-0 opacity-80" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="12,0 24,12 12,24 0,12" />
                       </svg>
                       <p className="text-white/90 font-medium tracking-wide">{item}</p>

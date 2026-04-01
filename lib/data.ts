@@ -17,7 +17,7 @@ export const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Divisions", href: "#", dropdown: divisions.map(({ name, href }) => ({ name, href })) },
-
+  { name: "Social Drive", href: "/csr" },
   { name: "Investors", href: "/investors" },
 ];
 
