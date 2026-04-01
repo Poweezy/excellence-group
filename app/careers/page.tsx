@@ -1,20 +1,14 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Users, Briefcase, Zap, ArrowRight, Star } from "lucide-react";
+import { Briefcase, Zap, ArrowRight, Star } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = { 
   title: "Careers",
   description: "Join the Architects of Excellence. Future-focused careers with Excellence Group (Pty) Ltd."
 };
-
-const MotionDivClient = dynamic(() => import("react").then(() => {
-  const { motion } = require("framer-motion");
-  return { default: motion.div };
-}), { ssr: false });
 
 export default function CareersPage() {
   return (

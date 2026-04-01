@@ -6,7 +6,7 @@ export default function CSRHero() {
     <section className="py-24 animated-bg relative min-h-[60vh] overflow-hidden flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full pt-16">
         <AnimatedSection className="max-w-4xl">
-          <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Social Drive (CSR)</span>
+          <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Social Drive</span>
           <h1 className="mt-3 luxury-text-display text-5xl lg:text-7xl font-bold text-white leading-tight">
             Commitment to <br />
             <span className="gold-shimmer italic font-light">Lasting Value.</span>

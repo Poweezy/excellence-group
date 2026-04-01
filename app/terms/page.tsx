@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">1. Acceptance of Terms</h2>
           <p className="text-slate-400 mb-6">
-            By accessing or using the Excellence Group (Pty) Ltd website (the "Site"), you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions, then you may not access the website.
+            By accessing or using the Excellence Group (Pty) Ltd website (the &quot;Site&quot;), you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions, then you may not access the website.
           </p>
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">2. Governing Law</h2>

@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">1. Introduction</h2>
           <p className="text-slate-400 mb-6">
-            Excellence Group (Pty) Ltd ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tells you about your privacy rights and how the law protects you, in compliance with the Eswatini Data Protection Act (2022) and other relevant regulations.
+            Excellence Group (Pty) Ltd (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tells you about your privacy rights and how the law protects you, in compliance with the Eswatini Data Protection Act (2022) and other relevant regulations.
           </p>
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">2. The Data We Collect About You</h2>
