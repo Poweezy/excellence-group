@@ -19,6 +19,7 @@ const footerLinks = {
     { name: "Heavy Plant & Construction", href: "/heavy-plant" },
     { name: "Agriculture Division", href: "/agriculture" },
     { name: "Mall & Property", href: "/mall-property" },
+    { name: "Vet & Animal Health", href: "/veterinary" },
   ],
   Legal: [
     { name: "Privacy Policy", href: "/privacy" },

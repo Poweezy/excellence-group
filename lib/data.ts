@@ -1,4 +1,4 @@
-import { Landmark, Truck, Droplets, Construction, Sprout, Building2, ShieldCheck, Zap, Award, Heart, Leaf } from "lucide-react";
+import { Landmark, Truck, Droplets, Construction, Sprout, Building2, ShieldCheck, Zap, Award, Heart, Leaf, HeartPulse } from "lucide-react";
 import type { Division, NavLink, Stat, Value } from './types';
 
 export const divisions: Division[] = [
@@ -11,6 +11,7 @@ export const divisions: Division[] = [
   { name: "Agriculture", icon: Sprout, href: "/agriculture", desc: "Modern farming and agri-processing", image: "/assets/agriculture-bg.png" },
   { name: "Mall & Property", icon: Building2, href: "/mall-property", desc: "Premium real estate development", image: "/assets/mall-property-bg.jpg" },
   { name: "Insurance Division", icon: ShieldCheck, href: "/insurance", desc: "Comprehensive risk management solutions", image: "/assets/insurance-bg.jpg" },
+  { name: "Vet & Animal Health", icon: HeartPulse, href: "/veterinary", desc: "Livestock health and veterinary solutions", image: "/assets/agriculture-bg.png" },
 ];
 
 export const navLinks: NavLink[] = [
