@@ -102,7 +102,7 @@ export default function VeterinaryPage() {
           <div className="absolute inset-0 z-0 overflow-hidden">
             <div className="absolute inset-0 z-0">
               <Image
-                src="/assets/agriculture-bg.png"
+                src="/assets/veterinary-bg.png"
                 alt="Excellence Group Veterinary & Animal Health"
                 fill
                 className="object-cover opacity-50"

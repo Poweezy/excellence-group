@@ -21,8 +21,8 @@ const services = [
     desc: "Mechanized farming solutions using high-performance tractors and tractor-driven machinery for large-scale operations.",
   },
   {
-    title: "Animal Feed & Veterinary Medication",
-    desc: "The Group manufactures and distributes high-quality nutrient-balanced animal feed, veterinary medications and supplements, and livestock performance enhancers.",
+    title: "Animal Feed",
+    desc: "The Group manufactures and distributes high-quality nutrient-balanced animal feed.",
   },
 ];
 
