@@ -14,6 +14,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [divisionsOpen, setDivisionsOpen] = useState(false);
+  const [mobileDivisionsOpen, setMobileDivisionsOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -115,7 +116,10 @@ export default function Header() {
           {/* Mobile menu toggle */}
           <button
             className="lg:hidden text-white/60 hover:text-white transition-colors"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => {
+              setMobileOpen(!mobileOpen);
+              if (mobileOpen) setMobileDivisionsOpen(false);
+            }}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -128,26 +132,71 @@ export default function Header() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 top-20 bg-dark/90 backdrop-blur-3xl z-40 lg:hidden flex flex-col p-8 border-t border-white/5 shadow-2xl"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "calc(100vh - 5rem)" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="fixed inset-0 top-20 bg-dark/95 backdrop-blur-3xl z-40 lg:hidden flex flex-col border-t border-white/5 shadow-2xl overflow-y-auto overflow-x-hidden"
           >
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col p-8 gap-6 min-h-max pb-20">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="luxury-text-display text-4xl text-white/60 hover:text-primary transition-all"
-                >
-                  {link.name}
-                </Link>
+                <div key={link.name} className="flex flex-col">
+                  {link.dropdown ? (
+                    <>
+                      <button
+                        onClick={() => setMobileDivisionsOpen(!mobileDivisionsOpen)}
+                        className="flex items-center justify-between luxury-text-display text-3xl text-white/60 hover:text-primary transition-all text-left"
+                      >
+                        {link.name}
+                        <ChevronDown className={cn("w-6 h-6 transition-transform duration-300", mobileDivisionsOpen && "rotate-180")} />
+                      </button>
+                      <AnimatePresence>
+                        {mobileDivisionsOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="flex flex-col gap-4 pl-4 mt-6 border-l border-white/10">
+                              {link.dropdown.map((div) => (
+                                <Link
+                                  key={div.href}
+                                  href={div.href}
+                                  onClick={() => {
+                                    setMobileOpen(false);
+                                    setMobileDivisionsOpen(false);
+                                  }}
+                                  className="luxury-text-accent text-lg text-white/40 hover:text-primary transition-all py-1"
+                                >
+                                  {div.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileDivisionsOpen(false);
+                      }}
+                      className="luxury-text-display text-4xl text-white/60 hover:text-primary transition-all"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Link
                 href="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="mt-8 text-primary luxury-text-accent text-lg"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setMobileDivisionsOpen(false);
+                }}
+                className="mt-4 px-8 py-4 border border-primary/20 text-primary text-center luxury-text-accent text-lg hover:bg-primary/5 transition-all"
               >
                 Contact Us
               </Link>
