@@ -95,17 +95,34 @@ export default function InvestorsPage() {
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              "Annual Report 2025",
-              "Interim Financial Results",
-              "Strategic Overview Document",
-              "Corporate Governance Framework"
+              { 
+                name: "Annual Report 2025", 
+                path: "/documents/investors/annual-report-2025.pdf" 
+              },
+              { 
+                name: "Interim Financial Results", 
+                path: "/documents/investors/interim-results.pdf" 
+              },
+              { 
+                name: "Strategic Overview Document", 
+                path: "/documents/investors/strategic-overview.pdf" 
+              },
+              { 
+                name: "Corporate Governance Framework", 
+                path: "/documents/investors/governance-framework.pdf" 
+              }
             ].map((doc, i) => (
-              <div key={doc} className="flex items-center justify-between p-6 rounded-xl border border-white/5 bg-dark hover:border-secondary/30 transition-all cursor-pointer group">
-                <span className="text-white font-medium luxury-text-sans">{doc}</span>
+              <a 
+                key={doc.name} 
+                href={doc.path}
+                download
+                className="flex items-center justify-between p-6 rounded-xl border border-white/5 bg-dark hover:border-secondary/30 transition-all cursor-pointer group"
+              >
+                <span className="text-white font-medium luxury-text-sans">{doc.name}</span>
                 <div className="p-2 rounded-lg bg-white/5 group-hover:bg-secondary/20 transition-colors">
                    <ArrowRight className="w-4 h-4 text-white group-hover:text-secondary transition-colors" />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

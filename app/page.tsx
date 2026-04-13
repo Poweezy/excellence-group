@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden bg-dark">
       <motion.div className="scroll-progress" style={{ scaleX }} />
-      
+
       {/* ───── HERO ───── */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Base Layer: Deep Navy Marble */}
@@ -49,7 +49,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg" />
         </div>
-        
+
         {/* Architectural Framing */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
           <div className="absolute -left-[25%] top-0 h-[150%] w-[50%] bg-dark-card/40 skew-x-[-15deg] border-r border-primary/10 backdrop-blur-sm" />
@@ -63,9 +63,9 @@ export default function HomePage() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="mb-8"
           >
-            <Image 
-              src="/logo.png" 
-              alt="Excellence Group Logo" 
+            <Image
+              src="/logo.png"
+              alt="Excellence Group Logo"
               width={180}
               height={180}
               className="h-48 sm:h-64 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]"
@@ -83,7 +83,7 @@ export default function HomePage() {
               <span className="luxury-gradient-gold block pb-2">Diversified Strength.</span>
               <span className="text-white italic block">Unified Vision.</span>
             </h1>
-            
+
             <p className="text-white/80 text-base sm:text-lg font-light max-w-2xl mx-auto mb-10 luxury-text-sans tracking-wide">
               A premium, resilient, forward-thinking diversified African enterprise driving sustainable growth across Eswatini and Southern Africa.
             </p>
@@ -98,7 +98,7 @@ export default function HomePage() {
                 </span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
               </Link>
-              
+
               <Link
                 href="/contact"
                 className="group relative px-12 py-5 border border-primary/40 hover:border-primary transition-all duration-500 min-w-[240px]"
@@ -112,8 +112,8 @@ export default function HomePage() {
         </div>
 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-primary/40">
-          <motion.div 
-            animate={{ y: [0, 10, 0] }} 
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2.5 }}
             className="flex flex-col items-center"
           >
@@ -172,7 +172,7 @@ export default function HomePage() {
                         />
                       </div>
                     )}
-                    
+
                     {/* Base Content (Fades out on hover) */}
                     <div className="flex flex-col items-center justify-center transition-all duration-500 group-hover:opacity-0 group-hover:scale-95 relative z-10">
                       <div className="mb-6 relative">
@@ -184,7 +184,7 @@ export default function HomePage() {
                       </h3>
                       <div className="mt-4 w-0 group-hover:w-8 h-[1px] bg-primary/40 transition-all duration-700" />
                     </div>
-                    
+
                     {/* Hover Description overlay */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-dark/95 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                       <Icon className="w-8 h-8 text-primary mb-4" strokeWidth={1} />
@@ -213,9 +213,9 @@ export default function HomePage() {
                 <span className="italic">Execution.</span>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed font-light luxury-text-sans max-w-xl">
-                For over two decades, Excellence Group has redefined conglomerate management through a unique blend of traditional values and aggressive innovation. We don&apos;t just lead industries—we evolve them.
+                For over a decade, Excellence Group has redefined conglomerate management through a unique blend of traditional values and aggressive innovation. We don&apos;t just lead industries—we evolve them.
               </p>
-              
+
               <div className="mt-12 space-y-8">
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0">
@@ -279,7 +279,7 @@ export default function HomePage() {
         {/* Abstract background elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <div className="absolute inset-0 bg-marble-luxury bg-cover bg-bottom opacity-55" />
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <AnimatedSection>
             <h2 className="luxury-text-display text-6xl lg:text-8xl text-white mb-12 leading-tight">
