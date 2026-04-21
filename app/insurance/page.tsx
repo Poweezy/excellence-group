@@ -13,7 +13,7 @@ export default function InsurancePage() {
       icon={ShieldCheck}
       title="Insurance Division"
       subtitle="Comprehensive Protection"
-      description="The Group offers comprehensive risk protection and insurance solutions tailored to individuals, SMEs, and corporates, including:\n\nWe prioritize client-centric service, financial security, and responsive claims management."
+      description="The Group offers comprehensive risk protection and insurance solutions tailored to individuals, SMEs, and corporates. We prioritize client-centric service, financial security, and claims management."
       services={[
         { title: "Life and Health Insurance", desc: "Coverage for life assurance, personal health, disability, and medical expenses." },
         { title: "Agriculture Insurance Solutions", desc: "Tailored protection for crops, livestock, farms, and agricultural assets." },
